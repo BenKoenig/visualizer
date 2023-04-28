@@ -1,8 +1,8 @@
-import Test from "../components/Test.jsx";
+import CanvasWrapper from "../components/CanvasWrapper.jsx";
 
 const Home = () => {
     return(
-        <Test/>
+        <CanvasWrapper/>
     )
 }
 
