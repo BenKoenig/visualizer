@@ -11,15 +11,15 @@ Create Vite + React template
 ```
 npm create vite@latest my-vue-app -- --template react
 ```
-**Setting up react router**
-Install the router package
+**Setting up react app**
+Install the app package
 ```
-npm install react-router-dom
+npm install react-app-dom
 ```
 
-Create a new file called *router.jsx*
+Create a new file called *App.jsx*
 Create the following files:
-- *router.jsx*
+- *App.jsx*
 - folder: *pages*
     - inside *pages* folder: *Home.jsx*
     - also inside *pages* folder: *About.jsx*
@@ -51,15 +51,15 @@ const About = () => {
   
 export default About
 ```
-Now to router.jsx
+Now to App.jsx
 ```
-// router.jsx
+// App.jsx
 import './App.css'  
-import { Routes, Route } from 'react-router-dom';  
+import { Routes, Route } from 'react-app-dom';  
 import Home from "./pages/Home.jsx"; 
 import About from "./pages/About.jsx";  
   
-function router() {  
+function app() {  
   return (  
     <>  
         <Routes>  
@@ -70,9 +70,9 @@ function router() {
   )  
 }  
   
-export default router
+export default app
 ```
-- import Routes & Route from react-router-dom package
+- import Routes & Route from react-app-dom package
 - import the Home + About pages we have created
 - route the pages Home + About using the following structure
 
@@ -81,20 +81,20 @@ Update index.jsx or app.jsx (name of the file may vary)
 // index.jsx
 import React from 'react'  
 import ReactDOM from 'react-dom/client'  
-import router from './router.jsx'  
-import { BrowserRouter } from 'react-router-dom';  
+import app from './App.jsx'  
+import { BrowserRouter } from 'react-app-dom';  
   
 ReactDOM.createRoot(document.getElementById('root')).render(  
   <React.StrictMode>  
       <BrowserRouter>  
-          <router />  
+          <app />  
       </BrowserRouter>  
   </React.StrictMode>
 )
 ```
 - First you import BrowserRouter from the package you installed in the previous step
-- Then you import router.jsx
-- Insert the router function within BrowserRouter
+- Then you import app.jsx
+- Insert the app function within BrowserRouter
 
 **Install SCSS**
 ```
@@ -139,7 +139,7 @@ const App = () => {
   )
 }
 
-export default App
+export default App  
 ```
 
 Now you have successfully added Sass to your React Vite project. The Sass styles should be applied to your components, and you can use all Sass features like variables, mixins, and nested styles.

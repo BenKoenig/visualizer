@@ -10,7 +10,6 @@ const CanvasWrapper = () => {
             <pointLight position={[10, 10, 10]} />
             <Stars />
             <GrassGroundPlane />
-{/*            <Tree position={[0, 0, 0]} />*/}
             <OrbitControls />
         </Canvas>
     );
