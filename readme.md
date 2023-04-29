@@ -26,10 +26,11 @@ Create the following files:
 
 Fill Home.jsx with temporariy code
 ```
+// pages/Home.jsx
 const Home = () => {  
     return(  
         <>  
-	        <h1>Home Page</h1>
+          <h1>Home Page</h1>
         </>  
     )  
 }  
@@ -39,10 +40,11 @@ export default Home
 
 Same with the About.jsx file
 ```
+// pages/ About.jsx
 const About = () => {  
     return(  
         <>  
-	        <h1>About Page</h1>
+          <h1>About Page</h1>
         </>  
     )  
 }  
@@ -51,6 +53,7 @@ export default About
 ```
 Now to router.jsx
 ```
+// router.jsx
 import './App.css'  
 import { Routes, Route } from 'react-router-dom';  
 import Home from "./pages/Home.jsx"; 
@@ -75,6 +78,7 @@ export default router
 
 Update index.jsx or app.jsx (name of the file may vary)
 ```
+// index.jsx
 import React from 'react'  
 import ReactDOM from 'react-dom/client'  
 import router from './router.jsx'  
@@ -100,6 +104,7 @@ npm install --save-dev sass
 **Update vite.config.js**
 Vite has built-in support for Sass, so you don't need to add any additional configuration. However, make sure that your `vite.config.js` file has the following import statement to enable Vite's CSS support:
 ```
+// vite.config.js
 import { defineConfig } from 'vite'  
 import reactRefresh from '@vitejs/plugin-react-refresh'  
   
