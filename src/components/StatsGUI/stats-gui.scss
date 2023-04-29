@@ -1,17 +1,78 @@
+@use '../../helper/scss/font-sizes';
+@use '../../helper/scss/colors';
+@use '../../helper/scss/sizing';
+
 /* StatsGUI container */
 .container {
   position: fixed;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  top: 10px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
   z-index:1;
-  gap:10px;
-  background-color: #fff;
   color: #000;
-  padding: 22px;
-  border-radius: 6px 6px 0 0;
-  &__facts {
-      list-style-position: inside;
-      list-style-type: decimal;
+  max-width: 1000px;
+  width: 100%;
+  overflow-y: auto;
+
+  &__gui {
+    background-color: #fff;
+    border-radius: sizing.$rounded-base;
+    padding: 10px 11px;
+
+    &__facts {
+      &__list {
+        list-style-position: inside;
+        list-style-type: decimal;
+        font-size: font-sizes.$text-base;
+        background-color: colors.$color-lime-300;
+        padding: 13px 14px;
+        border-radius: sizing.$rounded-base;
+
+        &__item {
+          margin-bottom: 6px;
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+      &--headline {
+        font-size: font-sizes.$text-lg;
+        margin-bottom: 10px;
+        font-weight: 700;
+      }
+    }
+
+    /* === start of gui btn === */
+    &__btn {
+      position: relative;
+      z-index: 20;
+      display: flex;
+      width: fit-content;
+      margin-left: auto;
+      margin-top: 10px;
+      background-color: colors.$color-gray-300;
+      padding: 10px;
+      border-radius: 100%;
+
+      &__clickable {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        border: 0;
+        cursor: pointer;
+      }
+
+      &--svg {
+        width: 20px;
+        position: relative;
+      }
+      /* === end of gui btn === */
+    }
   }
 }

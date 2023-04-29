@@ -1,4 +1,3 @@
-
 ## Tech Stack
 - React
 - SASS
@@ -102,18 +101,7 @@ npm install --save-dev sass
 ```
 
 **Update vite.config.js**
-Vite has built-in support for Sass, so you don't need to add any additional configuration. However, make sure that your `vite.config.js` file has the following import statement to enable Vite's CSS support:
-```
-// vite.config.js
-import { defineConfig } from 'vite'  
-import reactRefresh from '@vitejs/plugin-react-refresh'  
-  
-// https://vitejs.dev/config/  
-export default defineConfig({  
-  plugins: [reactRefresh()]  
-})
-```
-
+Vite has built-in support for Sass, so you don't need to add any additional configuration.
 Now you can use Sass in your React components by creating `.scss` or `.sass` files and importing them into your components. For example, create a `styles.scss` file:
 ```scss
 // styles.scss
