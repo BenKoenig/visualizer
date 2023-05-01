@@ -2,6 +2,7 @@ import './gui.scss'
 import Facts from "./blocks/facts/Facts.jsx";
 import Stats from "./blocks/stats/Stats.jsx";
 import {useState} from "react";
+import Intro from "./blocks/intro/Intro.jsx";
 
 const Gui = () => {
     const [hideGUI, setHideGUI] = useState(true)
@@ -14,7 +15,7 @@ const Gui = () => {
         <div className={`container ${hideGUI && 'container--closed' }`}>
             <div className={`container__gui ${hideGUI && 'container__gui--closed' }`}>
                 <div className="container__gui__head">
-                    <h2>More Details</h2>
+                    <h2>Visualizer 0.1.4</h2>
                     {
                         hideGUI ?
                             <button
@@ -38,6 +39,7 @@ const Gui = () => {
                 </div>
 
                 <div className="container__gui__wrapper">
+                    <Intro/>
                     <Facts/>
                     <Stats/>
                 </div>

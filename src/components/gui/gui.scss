@@ -58,6 +58,7 @@ $gui-header-height: 60px;
       letter-spacing: 0.1em;
       font-size: variables.$text-sm;
       height: $gui-header-height;
+      color: variables.$color-gray-800;
 
       &__closeBtn {
         z-index: 20;

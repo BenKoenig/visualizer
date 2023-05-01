@@ -1,0 +1,11 @@
+@use '../../../../helper/scss/variables';
+
+.intro {
+  position: relative;
+  border-radius: variables.$rounded-base;
+
+  &--video {
+    width: 100%;
+    border-radius: variables.$rounded-base;
+  }
+}
