@@ -1,6 +1,4 @@
-@use '../../helper/scss/font-sizes';
-@use '../../helper/scss/colors';
-@use '../../helper/scss/sizing';
+@use '../../helper/scss/variables';
 
 $gui-header-height: 60px;
 
@@ -18,7 +16,7 @@ $gui-header-height: 60px;
   overflow-y:scroll;
   overflow-x: hidden;
   height: 100vh;
-  border-radius: sizing.$rounded-base;
+  border-radius: variables.$rounded-base;
   transition-property: top;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
@@ -29,7 +27,7 @@ $gui-header-height: 60px;
 
   &__gui {
     background-color: #fff;
-    border-radius: sizing.$rounded-base;
+    border-radius: variables.$rounded-base;
     padding: 0 10px 11px 10px;
 
     &__wrapper {
@@ -48,7 +46,7 @@ $gui-header-height: 60px;
       align-items: center;
       text-transform: uppercase;
       letter-spacing: 0.1em;
-      font-size: font-sizes.$text-sm;
+      font-size: variables.$text-sm;
       height: $gui-header-height;
 
       &__closeBtn {
@@ -56,7 +54,7 @@ $gui-header-height: 60px;
         display: flex;
         width: fit-content;
         margin-left: auto;
-        background-color: colors.$color-gray-300;
+        background-color: variables.$color-gray-300;
         padding: 10px;
         border-radius: 100%;
         position: relative;

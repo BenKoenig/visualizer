@@ -118,19 +118,19 @@
   /* Fonts Roboto   */
   @font-face {
     font-family: "Roboto";
-    src: url("/fonts/Roboto-Regular.woff2") format("woff2");
+    src: url("/fonts/woof2/Roboto-Regular.woff2") format("woff2");
     font-weight: 400;
   }
 
   @font-face {
     font-family: "Roboto";
-    src: url("/fonts/Roboto-Bold.woff2") format("woff2");
+    src: url("/fonts/woof2/Roboto-Bold.woff2") format("woff2");
     font-weight: 700;
   }
 
   @font-face {
     font-family: "Roboto";
-    src: url("/fonts/Roboto-Thin.woff2") format("woff2");
+    src: url("/fonts/woof2/Roboto-Thin.woff2") format("woff2");
     font-weight: 100;
   }
 

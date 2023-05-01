@@ -10,7 +10,6 @@ const Gui = () => {
         hideGUI ? setHideGUI(false) : setHideGUI(true)
     }
 
-
     return(
         <div className={`container ${hideGUI && 'container--closed' }`}>
             <div className="container__gui">
@@ -40,7 +39,6 @@ const Gui = () => {
                                 </button>
                             </div>
                     }
-
                 </div>
 
                 <div className="container__gui__wrapper">

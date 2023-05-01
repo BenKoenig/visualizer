@@ -1,13 +1,11 @@
-@use '../../../../helper/scss/font-sizes';
-@use '../../../../helper/scss/colors';
-@use '../../../../helper/scss/sizing';
+@use '../../../../helper/scss/variables';
 
 .stats {
   &__list {
-    font-size: font-sizes.$text-base;
-    background-color: colors.$color-lime-300;
+    font-size: variables.$text-base;
+    background-color: variables.$color-lime-300;
     padding: 13px 14px;
-    border-radius: sizing.$rounded-base;
+    border-radius: variables.$rounded-base;
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -26,7 +24,7 @@
     }
   }
   &--headline {
-    font-size: font-sizes.$text-lg;
+    font-size: variables.$text-lg;
     margin-bottom: 10px;
     font-weight: 700;
   }
