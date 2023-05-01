@@ -3,12 +3,15 @@ import "./intro.scss"
 const Intro = () => {
     return(
         <div className="intro">
+            <div className={"intro__overlay"}>
+                <h1>Amazon Deforestation Visualizer</h1>
+            </div>
             <video
                 className="intro--video"
                 autoPlay muted loop playsInline
             >
                 <source src="/videos/rainforest.mp4" type="video/mp4" />
-{/*                <source src="https://api.goldbird.de/videos/hero_mobile_new.webm" type="video/webm" />*/}
+                <source src="/videos/rainforest.webm" type="video/webm" />
                 Your browser does not support the video tag.
             </video>
         </div>
