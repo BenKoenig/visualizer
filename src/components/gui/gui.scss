@@ -35,7 +35,7 @@ $gui-header-height: 60px;
 
   &__gui {
     background-color: #fff;
-    border-radius: variables.$rounded-base variables.$rounded-base 0 0;
+    border-radius: variables.$rounded-base;
     padding: 0 18px 11px 18px;
     margin-top:60px;
     transition-property: margin;
