@@ -16,7 +16,8 @@ const Facts = () => {
                 {/* map of all the facts in an ordered list */}
                 {facts.map((item,i) => (
                     <li key={i} className="facts__list__item">
-                        <span className="facts__list__item--listDecimal">{i+1}.</span> {item}
+                        <span className="facts__list__item--listDecimal">{i+1}</span>
+                        {item}
                     </li>
                 ))}
             </ol>

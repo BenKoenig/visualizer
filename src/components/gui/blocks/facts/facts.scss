@@ -1,5 +1,7 @@
 @use '../../../../helper/scss/variables';
 
+$list-decimal-size: 35px;
+
 .facts {
   &__list {
     font-size: variables.$text-base;
@@ -9,12 +11,22 @@
 
     &__item {
       margin-bottom: 6px;
+      display: flex;
       &:last-child {
         margin-bottom: 0;
       }
       &--listDecimal {
         font-weight: 700;
-        margin-right: 3px;
+        margin-right: 9px;
+        background-color: variables.$color-green-500;
+        color: #fff;
+        aspect-ratio: 1/1;
+        width: $list-decimal-size;
+        height: $list-decimal-size;
+        border-radius: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
     }
   }

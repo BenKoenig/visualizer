@@ -88,7 +88,7 @@ $gui-header-height: 60px;
       }
 
       &--open {
-        background-color: #6a7852;
+        background-color: variables.$color-green-500;
         color: #fff;
         padding: 8px 13px;
         border-radius: 50px;

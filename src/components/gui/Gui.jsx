@@ -15,7 +15,6 @@ const Gui = () => {
             <div className={`container__gui ${hideGUI && 'container__gui--closed' }`}>
                 <div className="container__gui__head">
                     <h2>More Details</h2>
-
                     {
                         hideGUI ?
                             <button
