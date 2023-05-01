@@ -16,11 +16,17 @@ $gui-header-height: 60px;
   width: 100%;
   overflow-y:scroll;
   overflow-x: hidden;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
   height: 100vh;
   border-radius: variables.$rounded-base variables.$rounded-base 0 0;
   transition-property: top;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
+
+  &::-webkit-scrollbar{
+    display: none;
+  }
 
   &--closed {
     top: calc(100% - $gui-header-height);
