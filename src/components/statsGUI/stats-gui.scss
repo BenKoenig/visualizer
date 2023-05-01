@@ -2,7 +2,7 @@
 @use '../../helper/scss/colors';
 @use '../../helper/scss/sizing';
 
-/* StatsGUI container */
+/* statsGUI container */
 .container {
   position: fixed;
   top: 10px;
@@ -13,7 +13,10 @@
   color: #000;
   max-width: 1000px;
   width: 100%;
-  overflow-y: auto;
+  overflow-y:scroll;
+  overflow-x:hidden;
+  height: 100vh;
+  border-radius: sizing.$rounded-base;
 
   &__gui {
     background-color: #fff;
@@ -45,12 +48,13 @@
 
     /* === start of gui btn === */
     &__btn {
-      position: relative;
+      position: sticky;
+      top:10px;
       z-index: 20;
       display: flex;
       width: fit-content;
       margin-left: auto;
-      margin-top: 10px;
+      margin-bottom: 7px;
       background-color: colors.$color-gray-300;
       padding: 10px;
       border-radius: 100%;
