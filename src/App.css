@@ -93,6 +93,17 @@
     font-style: italic;
   }
 
+  button {
+    appearance: none;
+    -webkit-appearance: none; /* for Safari */
+    -moz-appearance: none; /* for Firefox */
+    border: none;
+    background-color: transparent; /* or set your own background color */
+    padding: 0; /* or set your own padding */
+    margin: 0; /* or set your own margin */
+    cursor: pointer;
+  }
+
   .sr-only {
     position: absolute;
     width: 1px;

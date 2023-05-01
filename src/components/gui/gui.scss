@@ -2,6 +2,8 @@
 @use '../../helper/scss/colors';
 @use '../../helper/scss/sizing';
 
+$gui-header-height: 60px;
+
 /* gui container */
 .container {
   position: fixed;
@@ -14,14 +16,21 @@
   max-width: 1000px;
   width: 100%;
   overflow-y:scroll;
-  overflow-x:hidden;
+  overflow-x: hidden;
   height: 100vh;
   border-radius: sizing.$rounded-base;
+  transition-property: top;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+
+  &--closed {
+    top: calc(100% - $gui-header-height);
+  }
 
   &__gui {
     background-color: #fff;
     border-radius: sizing.$rounded-base;
-    padding: 10px 11px;
+    padding: 0 10px 11px 10px;
 
     &__wrapper {
       display: flex;
@@ -30,34 +39,59 @@
     }
 
     /* === start of gui btn === */
-    &__btn {
+    &__head {
       position: sticky;
-      top:10px;
-      z-index: 20;
+      top:0;
+      width: 100%;
+      background-color: #fff;
       display: flex;
-      width: fit-content;
-      margin-left: auto;
-      margin-bottom: 7px;
-      background-color: colors.$color-gray-300;
-      padding: 10px;
-      border-radius: 100%;
+      align-items: center;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-size: font-sizes.$text-sm;
+      height: $gui-header-height;
 
-      &__clickable {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        width: 100%;
-        height: 100%;
-        background-color: transparent;
-        border: 0;
-        cursor: pointer;
+      &__closeBtn {
+        z-index: 20;
+        display: flex;
+        width: fit-content;
+        margin-left: auto;
+        background-color: colors.$color-gray-300;
+        padding: 10px;
+        border-radius: 100%;
+        position: relative;
+
+        &__clickable {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          width: 100%;
+          height: 100%;
+          background-color: transparent;
+          border: 0;
+        }
+
+        &--svg {
+          width: 20px;
+          position: relative;
+        }
       }
 
-      &--svg {
-        width: 20px;
-        position: relative;
+      &--open {
+        background-color: #5a6448;
+        color: #fff;
+        padding: 8px 13px;
+        border-radius: 50px;
+        margin-left: auto;
+        transition-property: background-color;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 150ms;
+
+        &:hover {
+          background-color: #000;
+        }
       }
       /* === end of gui btn === */
     }

@@ -11,7 +11,7 @@ const Stats = () => {
     }
 
     return(
-        <div className={"stats"}>
+        <div className="stats">
             <h2 className={"stats--headline"}>Stats</h2>
             <ul className={"stats__list"}>
                 {/* map of all the facts in an ordered list */}
