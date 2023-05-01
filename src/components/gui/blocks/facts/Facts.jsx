@@ -10,13 +10,13 @@ const Facts = () => {
         "Over 40% of Global Tropical Deforestation Occurs in Brazil",
     ]
     return(
-        <div className={"facts"}>
-            <h2 className={"facts--headline"}>Facts</h2>
-            <ol className={"facts__list"}>
+        <div>
+            <h2 className={"headline"}>Facts</h2>
+            <ol className={"list"}>
                 {/* map of all the facts in an ordered list */}
                 {facts.map((item,i) => (
-                    <li key={i} className="facts__list__item">
-                        <span className="facts__list__item--listDecimal">{i+1}</span>
+                    <li key={i} className="list__item">
+                        <span className="list__item--listDecimal">{i+1}</span>
                         {item}
                     </li>
                 ))}
