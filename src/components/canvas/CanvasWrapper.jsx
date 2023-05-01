@@ -1,7 +1,7 @@
 import React from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Stars } from "@react-three/drei";
-import GrassGroundPlane from "./GrassGroundPlane";
+import GrassGroundPlane from "./GrassGroundPlane.jsx";
 
 const CanvasWrapper = () => {
     return (

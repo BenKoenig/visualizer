@@ -1,4 +1,4 @@
-import CanvasWrapper from "../components/CanvasWrapper.jsx";
+import CanvasWrapper from "../components/canvas/CanvasWrapper.jsx";
 import Gui from "../components/gui/Gui.jsx";
 
 const Home = () => {
