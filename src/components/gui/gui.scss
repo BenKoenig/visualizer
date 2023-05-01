@@ -1,11 +1,14 @@
 @use '../../helper/scss/variables';
 
+/* height of the header of the GUI*/
 $gui-header-height: 60px;
+/* margin top on GUI when its open*/
+$gui-margin-top: 60px;
 
 /* gui container */
 .container {
   position: fixed;
-  top: 10px;
+  top: 0;
   left: 0;
   right: 0;
   margin: 0 auto;
@@ -16,19 +19,20 @@ $gui-header-height: 60px;
   overflow-y:scroll;
   overflow-x: hidden;
   height: 100vh;
-  border-radius: variables.$rounded-base;
+  border-radius: variables.$rounded-base variables.$rounded-base 0 0;
   transition-property: top;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 
   &--closed {
-    top: calc(100% - $gui-header-height);
+    top: calc(100% - $gui-header-height - $gui-margin-top);
   }
 
   &__gui {
+    margin-top: $gui-margin-top;
     background-color: #fff;
-    border-radius: variables.$rounded-base;
-    padding: 0 10px 11px 10px;
+    border-radius: variables.$rounded-base variables.$rounded-base 0 0;
+    padding: 0 18px 11px 18px;
 
     &__wrapper {
       display: flex;
