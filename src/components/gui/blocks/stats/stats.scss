@@ -1,0 +1,33 @@
+@use '../../../../helper/scss/font-sizes';
+@use '../../../../helper/scss/colors';
+@use '../../../../helper/scss/sizing';
+
+.stats {
+  &__list {
+    font-size: font-sizes.$text-base;
+    background-color: colors.$color-lime-300;
+    padding: 13px 14px;
+    border-radius: sizing.$rounded-base;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    &__item {
+      display: inline-block;
+      margin-bottom: 6px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      &__value {
+        background-color: red;
+        padding: 5px 10px;
+        border-radius: 100px;
+      }
+    }
+  }
+  &--headline {
+    font-size: font-sizes.$text-lg;
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+}

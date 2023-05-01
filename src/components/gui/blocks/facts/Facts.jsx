@@ -1,3 +1,5 @@
+import './facts.scss'
+
 const Facts = () => {
     /* list of facts */
     const facts = [
@@ -8,12 +10,12 @@ const Facts = () => {
         "Over 40% of Global Tropical Deforestation Occurs in Brazil",
     ]
     return(
-        <div className={"container__gui__facts"}>
-            <h2 className={"container__gui__facts--headline"}>Deforestation Facts</h2>
-            <ol className={"container__gui__facts__list"}>
+        <div className={"facts"}>
+            <h2 className={"facts--headline"}>Facts</h2>
+            <ol className={"facts__list"}>
                 {/* map of all the facts in an ordered list */}
                 {facts.map((item,i) => (
-                    <li key={i} className="container__gui__facts__list__item">
+                    <li key={i} className="facts__list__item">
                         {item}
                     </li>
                 ))}

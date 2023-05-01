@@ -1,10 +1,10 @@
 import CanvasWrapper from "../components/CanvasWrapper.jsx";
-import StatsGUI from "../components/statsGUI/StatsGUI.jsx";
+import Gui from "../components/gui/Gui.jsx";
 
 const Home = () => {
     return(
         <>
-            <StatsGUI/>
+            <Gui/>
             <CanvasWrapper/>
         </>
     )
