@@ -2,8 +2,6 @@
 
 .facts {
   &__list {
-    list-style-position: inside;
-    list-style-type: decimal;
     font-size: variables.$text-base;
     background-color: variables.$color-lime-300;
     padding: 13px 14px;
@@ -13,6 +11,10 @@
       margin-bottom: 6px;
       &:last-child {
         margin-bottom: 0;
+      }
+      &--listDecimal {
+        font-weight: 700;
+        margin-right: 3px;
       }
     }
   }

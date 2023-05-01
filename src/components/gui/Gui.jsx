@@ -12,12 +12,9 @@ const Gui = () => {
 
     return(
         <div className={`container ${hideGUI && 'container--closed' }`}>
-            <div className="container__gui">
+            <div className={`container__gui ${hideGUI && 'container__gui--closed' }`}>
                 <div className="container__gui__head">
-                    {
-                        !hideGUI &&
-                        <h2>More Details</h2>
-                    }
+                    <h2>More Details</h2>
 
                     {
                         hideGUI ?

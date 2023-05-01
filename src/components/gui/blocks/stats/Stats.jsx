@@ -7,7 +7,7 @@ const Stats = () => {
             {value: "200,000 acres", desc: "burned today"},
             {value: "200,000 acres", desc: "burned today"},
             {value: "200,000 acres", desc: "burned today"},
-        ],
+        ]
     }
 
     return(
