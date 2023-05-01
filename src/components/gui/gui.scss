@@ -2,8 +2,8 @@
 
 /* height of the header of the GUI*/
 $gui-header-height: 60px;
-/* margin top on GUI when its open*/
-$gui-margin-top: 60px;
+/* gui translate-y when it is open*/
+$gui-translate: 60px;
 
 /* gui container */
 .container {
@@ -20,19 +20,20 @@ $gui-margin-top: 60px;
   overflow-x: hidden;
   height: 100vh;
   border-radius: variables.$rounded-base variables.$rounded-base 0 0;
-  transition-property: top;
+  transition-property: top,transform;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
+  transform: translateY($gui-translate);
 
   &--closed {
-    top: calc(100% - $gui-header-height - $gui-margin-top);
+    top: calc(100% - $gui-header-height);
+    transform: translateY(0);
   }
 
   &__gui {
-    margin-top: $gui-margin-top;
     background-color: #fff;
     border-radius: variables.$rounded-base variables.$rounded-base 0 0;
-    padding: 0 18px 11px 18px;
+    padding: 0 18px calc($gui-translate + 11px) 18px;
 
     &__wrapper {
       display: flex;
