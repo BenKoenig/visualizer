@@ -41,6 +41,8 @@ const Gui = () => {
                 <div className="container__gui__wrapper">
                     <Intro/>
                     <Facts/>
+                    <Facts/>
+                    <Facts/>
                     <Stats/>
                 </div>
             </div>
