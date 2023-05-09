@@ -1,4 +1,4 @@
-import './facts.scss'
+import classes from './classes.module.scss'
 
 const Facts = () => {
     /* list of facts */
@@ -9,14 +9,14 @@ const Facts = () => {
         "150 acres lost every minute",
         "Over 40% of Global Tropical Deforestation Occurs in Brazil",
     ]
-    return(
+    return (
         <div>
-            <h2 className={"headline"}>Facts</h2>
-            <ol className={"list"}>
+            <h2 className={classes.headline}>Facts</h2>
+            <ol className={classes.list}>
                 {/* map of all the facts in an ordered list */}
-                {facts.map((item,i) => (
-                    <li key={i} className="list__item">
-                        <span className="list__item--listDecimal">{i+1}</span>
+                {facts.map((item, i) => (
+                    <li key={i} className={classes.list__item}>
+                        <span className={classes['list__item--listDecimal']}>{i + 1}</span>
                         {item}
                     </li>
                 ))}
