@@ -1,9 +1,27 @@
-import "./hud.scss"
+import classes from './classes.module.scss'
 
 const Hud = () => {
+    const stages = {
+        data: [
+            {
+                name: "stage1"
+            },
+            {
+                name: "stage2"
+            },
+            {
+                name: "stage3"
+            },
+        ]
+    }
     return (
-        <div className="test">
-            asda
+        <div className={classes.container}>
+            {stages.data.map((stage, i) => (
+                <div
+                    key={i}
+                    className={classes.container__stage}>
+                </div>
+            ))}
         </div>
     )
 }

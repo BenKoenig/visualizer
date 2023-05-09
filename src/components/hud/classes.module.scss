@@ -1,0 +1,16 @@
+.container {
+    position: fixed;
+    top: 3px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    z-index: 1;
+    display: flex;
+    gap: 10px;
+    
+    &__stage {
+        width: 40px;
+        height: 10px;
+        background-color: red;
+    }
+}
