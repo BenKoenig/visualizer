@@ -7,26 +7,17 @@ import Links from './sections/links/Links';
 import { statsType } from '../../utils/types/statsType';
 import packageJson from '../../../package.json';
 
-interface GuiProps {
-  projectName: string
-  projectVersion: string
-  extendBtnText: string
-  closeBtnText: string
-}
 
-const Gui: React.FC<GuiProps> = ({
-  projectVersion,
-  projectName,
-  extendBtnText,
-  closeBtnText }) => {
+
+const Gui: React.FC = () => {
     
   // state variable with initial value of "true" and a function "setHideGUI" to toggle its value
   const [hideGUI, setHideGUI] = useState(true);
 
-  projectName = packageJson.name;
-  projectVersion = packageJson.version;
-  extendBtnText = "More Details"
-  closeBtnText = "Close"
+  const projectName = packageJson.name;
+  const projectVersion = packageJson.version;
+  const extendBtnText = "More Details"
+  const closeBtnText = "Close"
 
   // function to toggle the value of "hideGUI" between true and false
   const toggleGUI = () => {
