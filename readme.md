@@ -1,135 +1,113 @@
+# Project Title
+
+This project utilizes React, Typescript, zod, SASS, Vite, Three.js with React Three Fiber and drei, Framer Motion, and Jest.
+
 ## Tech Stack
 - React
 - Typescript
-- ZOD
+- zod
 - SASS
 - Vite
 - Three.js + React Three Fiber + drei
 - Framer Motion
+- Jest
 
-## How the project was setup
-Create Vite + React template
-```
-npm create vite@latest my-vue-app -- --template react
-```
-**Setting up react app**
-Install the app package
-```
-npm install react-app-dom
-```
+## Prerequisites
 
-Create a new file called *App.jsx*
-Create the following files:
-- *App.jsx*
-- folder: *pages*
-    - inside *pages* folder: *Home.jsx*
-    - also inside *pages* folder: *About.jsx*
+Ensure you have the following installed on your local development machine:
 
-Fill Home.jsx with temporariy code
-```
-// pages/Home.jsx
-const Home = () => {  
-    return(  
-        <>  
-          <h1>Home Page</h1>
-        </>  
-    )  
-}  
-  
-export default Home
-```
+- [Node.js](https://nodejs.org/en/) - (v14 or above)
+- [npm](https://www.npmjs.com/get-npm) or [Yarn](https://yarnpkg.com/getting-started/install)
 
-Same with the About.jsx file
-```
-// pages/ About.jsx
-const About = () => {  
-    return(  
-        <>  
-          <h1>About Page</h1>
-        </>  
-    )  
-}  
-  
-export default About
-```
-Now to App.jsx
-```
-// App.jsx
-import './App.css'  
-import { Routes, Route } from 'react-app-dom';  
-import Home from "./pages/Home.jsx"; 
-import About from "./pages/About.jsx";  
-  
-function app() {  
-  return (  
-    <>  
-        <Routes>  
-            <Route path="/" element={<Home />} />  
-            <Route path="/" element={<About />} /> 
-        </Routes>  
-    </>  
-  )  
-}  
-  
-export default app
-```
-- import Routes & Route from react-app-dom package
-- import the Home + About pages we have created
-- route the pages Home + About using the following structure
+## Installation
 
-Update index.jsx or app.jsx (name of the file may vary)
-```
-// index.jsx
-import React from 'react'  
-import ReactDOM from 'react-dom/client'  
-import app from './App.jsx'  
-import { BrowserRouter } from 'react-app-dom';  
-  
-ReactDOM.createRoot(document.getElementById('root')).render(  
-  <React.StrictMode>  
-      <BrowserRouter>  
-          <app />  
-      </BrowserRouter>  
-  </React.StrictMode>
-)
-```
-- First you import BrowserRouter from the package you installed in the previous step
-- Then you import app.jsx
-- Insert the app function within BrowserRouter
+Clone the repository locally:
 
-**Install SCSS**
-```
-npm install --save-dev sass
-```
+\`\`\`bash
+git clone https://github.com/<your-github-username>/<your-repo-name>.git
+\`\`\`
 
-**Update vite.config.js**
-Vite has built-in support for Sass, so you don't need to add any additional configuration.
-Now you can use Sass in your React components by creating `.scss` or `.sass` files and importing them into your components. For example, create a `styles.scss` file:
-```scss
-// styles.scss
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #f5f5f5;
-}
-```
+Navigate into the cloned repository:
 
-Then, import the `styles.scss` file in your React component:
-```
-// App.jsx
-import React from 'react'
-import './styles.scss'
+\`\`\`bash
+cd <your-repo-name>
+\`\`\`
 
-const App = () => {
-  return (
-    <div className="container">
-      <h1>Hello, Vite + React + Sass!</h1>
-    </div>
-  )
-}
+Install dependencies:
 
-export default App  
-```
+\`\`\`bash
+npm install
+\`\`\`
 
-Now you have successfully added Sass to your React Vite project. The Sass styles should be applied to your components, and you can use all Sass features like variables, mixins, and nested styles.
+OR if you prefer Yarn:
+
+\`\`\`bash
+yarn install
+\`\`\`
+
+## Starting the Development Server
+
+Run the following command to start the development server:
+
+\`\`\`bash
+npm run dev
+\`\`\`
+
+OR if you prefer Yarn:
+
+\`\`\`bash
+yarn dev
+\`\`\`
+
+## Building for Production
+
+To create a production build, use:
+
+\`\`\`bash
+npm run build
+\`\`\`
+
+OR if you prefer Yarn:
+
+\`\`\`bash
+yarn build
+\`\`\`
+
+## Running Tests
+
+To run tests, use:
+
+\`\`\`bash
+npm run test
+\`\`\`
+
+OR if you prefer Yarn:
+
+\`\`\`bash
+yarn test
+\`\`\`
+
+## Tech Stack
+
+- [React](https://reactjs.org/)
+- [Typescript](https://www.typescriptlang.org/)
+- [zod](https://github.com/colinhacks/zod)
+- [SASS](https://sass-lang.com/)
+- [Vite](https://vitejs.dev/)
+- [Three.js](https://threejs.org/)
+- [React Three Fiber](https://github.com/pmndrs/react-three-fiber)
+- [drei](https://github.com/pmndrs/drei)
+- [Framer Motion](https://www.framer.com/api/motion/)
+- [Jest](https://jestjs.io/)
+
+## Contributing
+
+Please read [CONTRIBUTING.md](https://github.com/<your-github-username>/<your-repo-name>/blob/main/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/<your-github-username>/<your-repo-name>/blob/main/LICENSE.md) file for details.
+
+## Acknowledgments
+
+- [OpenAI](https://www.openai.com/) for the GPT-3 and GPT-4 models.
