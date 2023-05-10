@@ -1,5 +1,7 @@
 ## Tech Stack
 - React
+- Typescript
+- ZOD
 - SASS
 - Vite
 - Three.js + React Three Fiber + drei

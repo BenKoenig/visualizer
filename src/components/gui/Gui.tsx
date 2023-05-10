@@ -1,19 +1,21 @@
 import React, { useState } from 'react';
 import classes from './classes.module.scss';
-import Facts from './blocks/facts/Facts';
-import Stats from './blocks/stats/Stats';
-import Intro from './blocks/intro/Intro';
-import Links from './blocks/links/Links';
-import { statsType } from '../../helper/types/statsType';
-
+import Facts from './sections/facts/Facts';
+import Stats from './sections/stats/Stats';
+import Intro from './sections/intro/Intro';
+import Links from './sections/links/Links';
+import { statsType } from '../../utils/types/statsType';
 
 const Gui: React.FC = () => {
+  // state variable with initial value of "true" and a function "setHideGUI" to toggle its value
   const [hideGUI, setHideGUI] = useState(true);
 
+  // function to toggle the value of "hideGUI" between true and false
   const toggleGUI = () => {
     hideGUI ? setHideGUI(false) : setHideGUI(true);
   };
 
+  // array of objects which contains statistical data
   const stats: statsType[] = [
     {
       value: "200,001 acres",
