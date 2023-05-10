@@ -4,6 +4,8 @@ import Facts from './blocks/facts/Facts';
 import Stats from './blocks/stats/Stats';
 import Intro from './blocks/intro/Intro';
 import Links from './blocks/links/Links';
+import { statsType } from '../types/statsType';
+
 
 const Gui: React.FC = () => {
   const [hideGUI, setHideGUI] = useState(true);
@@ -11,6 +13,25 @@ const Gui: React.FC = () => {
   const toggleGUI = () => {
     hideGUI ? setHideGUI(false) : setHideGUI(true);
   };
+
+  const stats: statsType[] = [
+    {
+      value: "200,001 acres",
+      desc: "of land burned today",
+    },
+    {
+      value: "200,000 acres",
+      desc: "of land burned today",
+    },
+    {
+      value: "200,000 acres",
+      desc: "of land burned today",
+    },
+    {
+      value: "200,000 acres",
+      desc: "of land burned today",
+    },
+  ];
 
   return (
     <div className={`${classes.container} ${hideGUI && classes['container--closed']}`}>
@@ -43,7 +64,7 @@ const Gui: React.FC = () => {
         <div className={classes.container__gui__wrapper}>
           <Intro />
           <Facts />
-          <Stats />
+          <Stats stats={stats} />
           <Links />
         </div>
       </div>
