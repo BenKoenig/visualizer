@@ -5,10 +5,28 @@ import Stats from './sections/stats/Stats';
 import Intro from './sections/intro/Intro';
 import Links from './sections/links/Links';
 import { statsType } from '../../utils/types/statsType';
+import packageJson from '../../../package.json';
 
-const Gui: React.FC = () => {
+interface GuiProps {
+  projectName: string
+  projectVersion: string
+  extendBtnText: string
+  closeBtnText: string
+}
+
+const Gui: React.FC<GuiProps> = ({
+  projectVersion,
+  projectName,
+  extendBtnText,
+  closeBtnText }) => {
+    
   // state variable with initial value of "true" and a function "setHideGUI" to toggle its value
   const [hideGUI, setHideGUI] = useState(true);
+
+  projectName = packageJson.name;
+  projectVersion = packageJson.version;
+  extendBtnText = "More Details"
+  closeBtnText = "Close"
 
   // function to toggle the value of "hideGUI" between true and false
   const toggleGUI = () => {
@@ -39,7 +57,7 @@ const Gui: React.FC = () => {
     <div className={`${classes.container} ${hideGUI && classes['container--closed']}`}>
       <div className={`${classes.container__gui} ${hideGUI && classes['container__gui--closed']}`}>
         <div className={classes.container__gui__head}>
-          <h2>Visualizer 0.1.4</h2>
+          <h2>{projectName} {projectVersion}</h2>
           {
             hideGUI ?
               <button
@@ -47,7 +65,7 @@ const Gui: React.FC = () => {
                 className={classes['container__gui__head--open']}
                 onClick={() => toggleGUI()}
               >
-                More Details
+                {extendBtnText}
               </button>
               :
               <div className={classes.container__gui__head__closeBtn}>
@@ -57,7 +75,7 @@ const Gui: React.FC = () => {
                   className={classes.container__gui__head__closeBtn__clickable}
                   onClick={() => toggleGUI()}
                 >
-                  <span className="sr-only">Close</span>
+                  <span className="sr-only">{closeBtnText}</span>
                 </button>
               </div>
           }
