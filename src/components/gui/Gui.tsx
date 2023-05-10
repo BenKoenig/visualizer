@@ -4,7 +4,7 @@ import Facts from './blocks/facts/Facts';
 import Stats from './blocks/stats/Stats';
 import Intro from './blocks/intro/Intro';
 import Links from './blocks/links/Links';
-import { statsType } from '../types/statsType';
+import { statsType } from '../../helper/types/statsType';
 
 
 const Gui: React.FC = () => {
