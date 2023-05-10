@@ -23,69 +23,69 @@ Ensure you have the following installed on your local development machine:
 
 Clone the repository locally:
 
-\`\`\`bash
+```bash
 git clone https://github.com/<your-github-username>/<your-repo-name>.git
-\`\`\`
+```
 
 Navigate into the cloned repository:
 
-\`\`\`bash
+```bash
 cd <your-repo-name>
-\`\`\`
+```
 
 Install dependencies:
 
-\`\`\`bash
+```bash
 npm install
-\`\`\`
+```
 
 OR if you prefer Yarn:
 
-\`\`\`bash
+```bash
 yarn install
-\`\`\`
+```
 
 ## Starting the Development Server
 
 Run the following command to start the development server:
 
-\`\`\`bash
+```bash
 npm run dev
-\`\`\`
+```
 
 OR if you prefer Yarn:
 
-\`\`\`bash
+```bash
 yarn dev
-\`\`\`
+```
 
 ## Building for Production
 
 To create a production build, use:
 
-\`\`\`bash
+```bash
 npm run build
-\`\`\`
+```
 
 OR if you prefer Yarn:
 
-\`\`\`bash
+```bash
 yarn build
-\`\`\`
+```
 
 ## Running Tests
 
 To run tests, use:
 
-\`\`\`bash
+```bash
 npm run test
-\`\`\`
+```
 
 OR if you prefer Yarn:
 
-\`\`\`bash
+```bash
 yarn test
-\`\`\`
+```
 
 ## Tech Stack
 
