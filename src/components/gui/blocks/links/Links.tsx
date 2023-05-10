@@ -1,6 +1,7 @@
+import React from 'react';
 import classes from './classes.module.scss'
 
-const Links = () => {
+const Links: React.FC = () => {
     return (
         <div>
             <p>This project is developed by Benjamin König</p>

@@ -1,6 +1,7 @@
+import React from 'react';
 import classes from './classes.module.scss'
 
-const Hud = () => {
+const Hud: React.FC = () => {
     const stages = {
         data: [
             {
