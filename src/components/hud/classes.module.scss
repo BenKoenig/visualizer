@@ -1,16 +1,17 @@
 .container {
     position: fixed;
-    top: 3px;
+    top: 15px;
     left: 50%;
     transform: translateX(-50%);
     color: #fff;
     z-index: 1;
     display: flex;
-    gap: 10px;
+    gap: 5px;
     
     &__stage {
-        width: 40px;
-        height: 10px;
-        background-color: red;
+        width: 80px;
+        height: 3.5px;
+        background-color: rgb(188, 188, 188);
+        border-radius: 10px;
     }
 }
