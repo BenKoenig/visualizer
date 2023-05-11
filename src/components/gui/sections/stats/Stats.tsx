@@ -1,6 +1,6 @@
 import React from 'react';
 import classes from './classes.module.scss'
-import { statsType } from '../../../../utils/types/statsType'
+import { statsType } from '../../../../utils/types'
 
 interface Props {
     stats: statsType[];

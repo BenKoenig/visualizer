@@ -4,7 +4,7 @@ import Facts from './sections/facts/Facts';
 import Stats from './sections/stats/Stats';
 import Intro from './sections/intro/Intro';
 import Links from './sections/links/Links';
-import { statsType } from '../../utils/types/statsType';
+import { statsType } from '../../utils/types';
 import packageJson from '../../../package.json';
 
 
