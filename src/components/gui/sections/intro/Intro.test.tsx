@@ -1,4 +1,4 @@
 describe('Intro', () => {
-    it('renders intro', () => {
-    });
-});
+  it('renders intro', () => {
+  })
+})

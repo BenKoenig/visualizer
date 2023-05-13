@@ -1,4 +1,4 @@
 describe('Stats', () => {
-    it('renders stats', () => {
-    });
-});
+  it('renders stats', () => {
+  })
+})

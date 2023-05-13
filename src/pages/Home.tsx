@@ -1,16 +1,16 @@
-import React from 'react';
-import CanvasWrapper from "../components/canvas/CanvasWrapper";
-import Gui from "../components/gui/Gui";
-import Hud from "../components/hud/Hud";
+import React from 'react'
+import CanvasWrapper from '../components/canvas/CanvasWrapper'
+import Gui from '../components/gui/Gui'
+import Hud from '../components/hud/Hud'
 
 const Home: React.FC = () => {
-    return(
+  return (
         <>
             <Hud/>
             <Gui/>
             <CanvasWrapper/>
         </>
-    )
+  )
 }
 
 export default Home

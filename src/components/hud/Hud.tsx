@@ -1,34 +1,34 @@
 import classes from './classes.module.scss'
-import React, { useEffect, useState } from 'react';
-import { stageType } from '../../utils/types';
+import React, { useEffect, useState } from 'react'
+import { type stageType } from '../../utils/types'
 
 const Hud: React.FC = () => {
-    const stages: stageType[] = [
-        {
-            name: "stage1"
-        },
-        {
-            name: "stage2"
-        },
-        {
-            name: "stage3"
-        },
-    ]
+  const stages: stageType[] = [
+    {
+      name: 'stage1'
+    },
+    {
+      name: 'stage2'
+    },
+    {
+      name: 'stage3'
+    }
+  ]
 
-    const [currentStage, setCurrentStage] = useState(0);
-    const [progress, setProgress] = useState(0);
+  const [currentStage, setCurrentStage] = useState(0)
+  const [progress, setProgress] = useState(0)
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setProgress((prevProgress) => prevProgress >= 100 ? 0 : prevProgress + (100 / (15 * 10)));
-            if (progress >= 100) {
-                setCurrentStage((prevStage) => prevStage >= stages.length - 1 ? 0 : prevStage + 1);
-            }
-        }, 100);
-        return () => clearInterval(interval);
-    }, [progress, stages.length]);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setProgress((prevProgress) => prevProgress >= 100 ? 0 : prevProgress + (100 / (15 * 10)))
+      if (progress >= 100) {
+        setCurrentStage((prevStage) => prevStage >= stages.length - 1 ? 0 : prevStage + 1)
+      }
+    }, 100)
+    return () => { clearInterval(interval) }
+  }, [progress, stages.length])
 
-    return (
+  return (
         <div className={classes.container}>
             {stages.map((stage, i) => (
                 <div
@@ -42,7 +42,7 @@ const Hud: React.FC = () => {
                 </div>
             ))}
         </div>
-    );
+  )
 }
 
-export default Hud;
+export default Hud

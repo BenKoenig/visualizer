@@ -1,18 +1,18 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import Routes from './router';
-import { BrowserRouter } from 'react-router-dom';
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import Routes from './router'
+import { BrowserRouter } from 'react-router-dom'
 
-const rootElement = document.getElementById('root');
+const rootElement = document.getElementById('root')
 
-if (rootElement) {
+if (rootElement !== null) {
   ReactDOM.createRoot(rootElement).render(
     <React.StrictMode>
       <BrowserRouter>
         <Routes />
       </BrowserRouter>
-    </React.StrictMode>,
-  );
+    </React.StrictMode>
+  )
 } else {
-  console.error('Root element not found');
+  console.error('Root element not found')
 }

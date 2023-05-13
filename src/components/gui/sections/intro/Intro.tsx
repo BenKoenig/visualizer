@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react'
 import classes from './classes.module.scss'
 
 const Intro: React.FC = () => {
-    return (
+  return (
         <>
             <div className={classes.videoWrapper}>
                 <div className={classes.videoWrapper__overlay}>
@@ -21,8 +21,8 @@ const Intro: React.FC = () => {
                 </video>
             </div>
             <h2>Experience the Impact of Amazon Rainforest Deforestation in Real-Time with our WebGL-Powered Web Application</h2>
-        </> 
-    );
-};
+        </>
+  )
+}
 
-export default Intro;
+export default Intro

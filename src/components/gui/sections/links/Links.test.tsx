@@ -1,4 +1,4 @@
 describe('Links', () => {
-    it('renders links', () => {
-    });
-});
+  it('renders links', () => {
+  })
+})

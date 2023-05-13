@@ -1,15 +1,15 @@
-import React from 'react';
-import classes from './classes.module.scss';
+import React from 'react'
+import classes from './classes.module.scss'
 
 const Facts: React.FC = () => {
   /* list of facts */
   const facts = [
-    "150 acres lost every minute",
-    "Over 40% of Global Tropical Deforestation Occurs in Brazil",
-    "Beef Production is the Biggest Driver for Deforestation in the Amazon",
-    "150 acres lost every minute",
-    "Over 40% of Global Tropical Deforestation Occurs in Brazil",
-  ];
+    '150 acres lost every minute',
+    'Over 40% of Global Tropical Deforestation Occurs in Brazil',
+    'Beef Production is the Biggest Driver for Deforestation in the Amazon',
+    '150 acres lost every minute',
+    'Over 40% of Global Tropical Deforestation Occurs in Brazil'
+  ]
 
   return (
     <div>
@@ -24,7 +24,7 @@ const Facts: React.FC = () => {
         ))}
       </ol>
     </div>
-  );
-};
+  )
+}
 
-export default Facts;
+export default Facts
