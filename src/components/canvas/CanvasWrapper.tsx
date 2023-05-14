@@ -1,7 +1,8 @@
 import React from 'react'
 import { Canvas } from '@react-three/fiber'
-import { OrbitControls, Stars } from '@react-three/drei'
+import { OrbitControls } from '@react-three/drei'
 import GrassGroundPlane from './GrassGroundPlane'
+import Plant from './Plant'
 
 const CanvasWrapper: React.FC = () => {
   return (
@@ -10,8 +11,9 @@ const CanvasWrapper: React.FC = () => {
             <ambientLight intensity={0.5} />
           {/* eslint-disable-next-line react/no-unknown-property */}
             <pointLight position={[10, 10, 10]} />
-            <Stars />
+            {/* <Stars /> */}
             <GrassGroundPlane />
+            <Plant url="/plant/potted_plant_01_4k.gltf"/>
             <OrbitControls />
         </Canvas>
   )
