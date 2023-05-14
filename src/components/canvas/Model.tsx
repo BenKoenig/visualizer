@@ -4,11 +4,12 @@ import { GLTF, GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import { useLoader } from '@react-three/fiber';
 import { useTexture } from '@react-three/drei';
 
-interface GLTFModelProps {
-  url: string;
+interface ModelProps {
+  url: string
+  pos: [number, number, number]
 }
 
-const GLTFModel: React.FC<GLTFModelProps> = ({ url }) => {
+const Model: React.FC<ModelProps> = ({ url, pos }) => {
   const gltf = useLoader(GLTFLoader, url);
   console.log(gltf)
 
@@ -23,7 +24,7 @@ const GLTFModel: React.FC<GLTFModelProps> = ({ url }) => {
   }, [gltf]);
 
   return (
-    <group> 
+    <group position={pos}> 
       {textures.map((texture, index) => (
         <primitive key={index} object={texture} />
       ))}
@@ -32,4 +33,4 @@ const GLTFModel: React.FC<GLTFModelProps> = ({ url }) => {
   );
 };
 
-export default GLTFModel;
+export default Model;

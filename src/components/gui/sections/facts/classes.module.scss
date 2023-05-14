@@ -4,7 +4,7 @@ $list-decimal-size: 35px;
 
 .list {
   font-size: variables.$text-base;
-  background-color: variables.$color-lime-300;
+  background-color: variables.$color-secondary;
   padding: 13px 14px;
   border-radius: variables.$rounded-base;
 
@@ -17,7 +17,7 @@ $list-decimal-size: 35px;
     &--listDecimal {
       font-weight: 700;
       margin-right: 9px;
-      background-color: variables.$color-green-500;
+      background-color: variables.$color-primary;
       color: #fff;
       aspect-ratio: 1/1;
       width: $list-decimal-size;

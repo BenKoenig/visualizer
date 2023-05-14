@@ -3,7 +3,7 @@
 .stats {
   &__list {
     font-size: variables.$text-base;
-    background-color: variables.$color-lime-300;
+    background-color: variables.$color-secondary;
     padding: 13px 14px;
     border-radius: variables.$rounded-base;
     flex-direction: column;
@@ -22,7 +22,7 @@
         margin-bottom: 0;
       }
       &__value {
-        background-color: variables.$color-green-500;
+        background-color: variables.$color-primary;
         color: #fff;
         padding: 5px 14px;
         border-radius:20px;
