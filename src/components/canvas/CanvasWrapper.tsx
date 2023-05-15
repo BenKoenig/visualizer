@@ -6,7 +6,6 @@ import GrassGroundPlane from './GrassGroundPlane'
 import Model from './Model'
 
 const CanvasWrapper: React.FC = () => {
-  
   const controlsRef = React.useRef<OrbitControls | null>(null)
 
   const handleControlsChange = () => {
