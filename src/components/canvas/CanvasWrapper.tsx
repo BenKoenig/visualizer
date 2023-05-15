@@ -1,7 +1,7 @@
 /* eslint-disable */ 
 import React from 'react'
 import { Canvas } from '@react-three/fiber'
-import { OrbitControls, Sky, Fog, PerspectiveCamera } from '@react-three/drei'
+import { OrbitControls, PerspectiveCamera } from '@react-three/drei'
 import GrassGroundPlane from './GrassGroundPlane'
 import Model from './Model'
 
