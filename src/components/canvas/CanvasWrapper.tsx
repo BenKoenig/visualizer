@@ -33,10 +33,12 @@ const CanvasWrapper: React.FC = () => {
             <GrassGroundPlane />
             <Model url="/palmtree.gltf" pos={[-4,0,0]} />
 
-            <OrbitControls
+          {/*   <OrbitControls
               ref={controlsRef}
               onChange={handleControlsChange}
-            />
+            /> */}
+            <OrbitControls ref={controlsRef} onChange={handleControlsChange} type="perspective" />
+
             <perspectiveCamera
               position={[0, 3000, 15]} // Adjust the camera position here
             />
