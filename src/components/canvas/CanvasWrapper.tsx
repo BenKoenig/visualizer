@@ -3,6 +3,8 @@ import React from 'react'
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls, PerspectiveCamera } from '@react-three/drei'
 import GrassGroundPlane from './GrassGroundPlane'
+
+
 import Model from './Model'
 
 const CanvasWrapper: React.FC = () => {
