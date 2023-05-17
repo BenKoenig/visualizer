@@ -4,11 +4,18 @@ import { Canvas } from '@react-three/fiber'
 import { OrbitControls, PerspectiveCamera } from '@react-three/drei'
 import GrassGroundPlane from './GrassGroundPlane'
 
-
 import Model from './Model'
 
+
+interface OrbitControlsInstance {
+  enableZoom: boolean;
+  enablePan: boolean;
+  maxPolarAngle: number;
+  // add here other properties you might need to access
+}
+
 const CanvasWrapper: React.FC = () => {
-  const controlsRef = React.useRef<OrbitControls | null>(null)
+  const controlsRef = React.useRef<OrbitControlsInstance | null>(null);
 
   const handleControlsChange = () => {
     const controls = controlsRef.current
