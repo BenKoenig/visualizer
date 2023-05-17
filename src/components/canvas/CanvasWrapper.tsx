@@ -42,7 +42,9 @@ const CanvasWrapper: React.FC = () => {
               ref={controlsRef}
               onChange={handleControlsChange}
             /> */}
-            <OrbitControls ref={controlsRef} onChange={handleControlsChange} type="perspective" />
+            <OrbitControls ref={controlsRef} onChange={handleControlsChange} />
+
+
 
             <perspectiveCamera
               position={[0, 3000, 15]} // Adjust the camera position here
