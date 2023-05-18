@@ -1,6 +1,6 @@
-Revert "add landign"
+Revert "update"
 
-This reverts commit b3aaa76c4b6822fd109101664b7b6fdf8af247db.
+This reverts commit 16f974cb55cac51a0d53045643822b44cea38700.
 
 # Please enter the commit message for your changes. Lines starting
 # with '#' will be ignored, and an empty message aborts the commit.
@@ -9,11 +9,8 @@ This reverts commit b3aaa76c4b6822fd109101664b7b6fdf8af247db.
 #
 # On branch landingpage
 # Changes to be committed:
-#	new file:   public/videos/forest-large.mp4
-#sdasd
-undo
+#	deleted:    1
+#	deleted:    public/videos/forest-large.mp4
+#
 
-
-	
-
-
+undo		
