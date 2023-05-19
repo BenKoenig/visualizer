@@ -29,6 +29,7 @@ const Landing: React.FC = () => {
           loop
           playsInline
         >
+
           <source src="/snailv2.mp4" type="video/mp4" />
             Your browser does not support the video tag.
         </video>
