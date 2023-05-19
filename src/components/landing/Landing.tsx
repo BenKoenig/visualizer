@@ -20,20 +20,6 @@ const Landing: React.FC = () => {
           </form>
         </div>
       </div>
-      <div className={classes.videoWrapper}>
-        <div className={classes['videoWrapper--overlay']}></div>
-        <video
-          className={classes['videoWrapper--video']}
-          autoPlay
-          muted
-          loop
-          playsInline
-        >
-
-          <source src="/snailv2.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-        </video>
-      </div>
     </div>
   )
 }
