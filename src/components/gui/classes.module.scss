@@ -59,6 +59,7 @@ $gui-header-height: 60px;
       width: 100%;
       background-color: #fff;
       display: flex;
+      justify-content: space-between;
       align-items: center;
       text-transform: uppercase;
       letter-spacing: 0.1em;
@@ -95,20 +96,7 @@ $gui-header-height: 60px;
         }
       }
 
-      &--open {
-        background-color: variables.$color-primary;
-        color: #fff;
-        padding: 8px 13px;
-        border-radius: 50px;
-        margin-left: auto;
-        transition-property: background-color;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-        transition-duration: 150ms;
 
-        &:hover {
-          background-color: #000;
-        }
-      }
       /* === end of gui btn === */
     }
   }
