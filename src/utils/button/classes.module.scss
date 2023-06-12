@@ -2,7 +2,8 @@
 
 .wrapper {
   border-radius: 50px;
-  padding: 2.5px;
+  padding: 2px;
+  border: transparent 1px solid;
 
   &__button {
     background-color: #fff;
@@ -19,7 +20,8 @@
 }
 
 .hovered {
-  background: variables.$color-primary;
+  border: variables.$color-obscure 1px solid;
+
 }
 
 
