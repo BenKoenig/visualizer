@@ -4,6 +4,7 @@ import React, { Suspense } from 'react'
 import { Canvas,extend,useLoader  } from '@react-three/fiber'
 import { OrbitControls, Sphere, Plane, SpotLight, MeshReflectorMaterial, Sky } from '@react-three/drei'
 import Terrain from './Terrain'
+import ModelFbx from './ModelFbx'
 
 extend({ Plane, MeshReflectorMaterial });
 
@@ -30,6 +31,7 @@ const CanvasWrapper: React.FC = () => {
     >
       <pointLight intensity={1} position={[0,4,12]}/>
       <Sky sunPosition={[0, 1, 0]} inclination={0} azimuth={0.25} />
+      <ModelFbx url="/palm.fbx" pos={[2,-3,0]} scale={0.001} />
 
       <Suspense fallback={null}>
         <Terrain/>
