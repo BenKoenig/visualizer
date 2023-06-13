@@ -10,7 +10,7 @@ interface ModelProps {
   scale: number;
 }
 
-const Model: React.FC<ModelProps> = ({ url, pos, scale}) => {
+const ModelFbx: React.FC<ModelProps> = ({ url, pos, scale}) => {
   const fbx = useLoader(FBXLoader, url); // Use FBXLoader instead of GLTFLoader
 
   const textures = useMemo(() => {
@@ -30,4 +30,4 @@ const Model: React.FC<ModelProps> = ({ url, pos, scale}) => {
   );
 };
 
-export default Model;
+export default ModelFbx;
