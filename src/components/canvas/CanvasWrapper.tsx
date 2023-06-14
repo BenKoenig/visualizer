@@ -1,9 +1,8 @@
 /* eslint-disable */
 // @ts-nocheck
-import React, { Suspense } from 'react'
-import { Canvas,extend,useLoader  } from '@react-three/fiber'
-import { OrbitControls, Sphere, Plane, SpotLight, MeshReflectorMaterial, Sky } from '@react-three/drei'
-import Terrain from './Terrain'
+import React from 'react'
+import { Canvas, extend  } from '@react-three/fiber'
+import { OrbitControls, Plane, MeshReflectorMaterial, Sky } from '@react-three/drei'
 import ModelFbx from './ModelFbx'
 
 extend({ Plane, MeshReflectorMaterial });
@@ -27,17 +26,13 @@ const CanvasWrapper: React.FC = () => {
   return (
     <Canvas
       style={{ width: '100%', height: '100%' }}
-      camera={{ position: [2, 2, 1] }} // Adjust the camera position here
+      camera={{ position: [20, 6, 0] }} // Adjust the camera position here
     >
-      <pointLight intensity={1} position={[0,4,12]}/>
+      <pointLight position={[0, 20, 10]} intensity={1.5} />
+      <ambientLight intensity={0.4} />
       <Sky sunPosition={[0, 1, 0]} inclination={0} azimuth={0.25} />
-      <ModelFbx url="/palm.fbx" pos={[2,-3,0]} scale={0.001} />
-
-      <Suspense fallback={null}>
-        <Terrain/>
-      </Suspense>
-      <OrbitControls ref={controlsRef} onChange={handleControlsChange} />
-
+      <ModelFbx url="/untitled.fbx" pos={[0,-3,0]} scale={0.15} />
+      <OrbitControls ref={controlsRef} onChange={handleControlsChange} target={[0, 0, 0]} />
     </Canvas>
   )
 }

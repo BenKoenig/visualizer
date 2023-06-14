@@ -6,7 +6,7 @@ const Intro: React.FC = () => {
         <>
             <div className={classes.videoWrapper}>
                 <div className={classes.videoWrapper__overlay}>
-                    <h1>Amazon Deforestation Visualizer</h1>
+                    <h1>Rainforest Deforestation Visualizer</h1>
                 </div>
                 <video
                     className={classes['videoWrapper--video']}
@@ -20,7 +20,7 @@ const Intro: React.FC = () => {
                     Your browser does not support the video tag.
                 </video>
             </div>
-            <h2>Experience the Impact of Amazon Rainforest Deforestation in Real-Time with our WebGL-Powered Web Application</h2>
+            <h2>Experience the Impact of Rainforest Deforestation in Real-Time with our WebGL-Powered Web Application</h2>
         </>
   )
 }
