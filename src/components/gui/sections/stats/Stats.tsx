@@ -8,11 +8,11 @@ interface Props {
 const Stats: React.FC<Props> = ({ stats }: Props) => {
   return (
         <div className={classes.stats}>
-            <h2 className={classes['stats--headline']}>Live Stats</h2>
+            <h2 className={classes['stats--headline']}>Statistics</h2>
             <ul className={classes.stats__list}>
                 {stats.map((statsItem, i) => (
                     <li key={i} className={classes.stats__list__item}>
-                        <span className={classes.stats__list__item__value}>{statsItem.value}</span>
+                        <span className={classes.stats__list__item__value}>{statsItem.value} {statsItem.unit}</span>
                         {statsItem.desc}
                     </li>
                 ))}

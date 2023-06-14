@@ -1,4 +1,5 @@
 @use '../../../../utils/scss/variables';
+$list-decimal-size: 35px;
 
 .stats {
   &__list {
@@ -33,6 +34,19 @@
         word-spacing: 100vw;
         width: calc(100% - 25px);
         height: 45px;
+      }
+      &--listDecimal {
+        font-weight: 700;
+        margin-right: 9px;
+        background-color: variables.$color-primary;
+        color: #fff;
+        aspect-ratio: 1/1;
+        width: $list-decimal-size;
+        height: $list-decimal-size;
+        border-radius: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
     }
   }

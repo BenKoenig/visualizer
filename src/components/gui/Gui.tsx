@@ -4,6 +4,7 @@ import Facts from './sections/facts/Facts'
 import Stats from './sections/stats/Stats'
 import Intro from './sections/intro/Intro'
 import Links from './sections/links/Links'
+import Causes from './sections/causes/Causes'
 import { type statsType } from '@/utils/types'
 import packageJson from '../../../package.json'
 import Button from '../../utils/button/Button'
@@ -11,7 +12,6 @@ import Button from '../../utils/button/Button'
 const Gui: React.FC = () => {
   // state variable with initial value of "true" and a function "setHideGUI" to toggle its value
   const [hideGUI, setHideGUI] = useState(true)
-
   const projectName = packageJson.name
   const projectVersion = packageJson.version
   const extendBtnText = 'More Details'
@@ -23,23 +23,77 @@ const Gui: React.FC = () => {
     hideGUI ? setHideGUI(false) : setHideGUI(true)
   }
 
+  /* list of facts */
+  const facts: factsType[] = [
+    {
+      desc: 'Beef Production is the Biggest Driver for Deforestation in the Amazon'
+    },
+    {
+      desc: '15B of trees cut down every year'
+    },
+    {
+      desc: '50,000 species disappear every year'
+    },
+    {
+      desc: 'The Amazon rainforest has lost over 17% of its area in the past 50 years'
+    },
+    {
+      desc: 'Deforestation contributes to climate change by releasing stored carbon back into the atmosphere'
+    },
+    {
+      desc: 'Agriculture, especially large-scale farming, contributes to extensive forest clearance'
+    },
+    {
+      desc: 'Deforestation increases the risk of flooding and soil erosion'
+    },
+    {
+      desc: 'International initiatives like REDD+ aim to address rainforest deforestation by providing incentives for forest protection'
+    },
+    {
+      desc: '150 acres lost every minute'
+    },
+    {
+      desc: 'Over 40% of Global Tropical Deforestation Occurs in Brazil'
+    }
+  ]
+
   // array of objects which contains statistical data
   const stats: statsType[] = [
     {
-      value: '200,001 acres',
+      value: 78433,
+      unit: '',
+      desc: 'forest fires since last year'
+    },
+    {
+      value: 139,
+      unit: 'acres',
+      desc: 'of rainforest lost last hour'
+    },
+    {
+      value: 200000,
+      unit: 'acres',
       desc: 'of land burned today'
     },
     {
-      value: '200,000 acres',
-      desc: 'of land burned today'
+      value: 2400,
+      unit: 'trees',
+      desc: 'cut down last minute'
+    }
+  ]
+
+  // array of objects which contains causes data
+  const causes: causeType[] = [
+    {
+      desc: 'Forests cleared to build factories, businesses, or homes'
     },
     {
-      value: '200,000 acres',
-      desc: 'of land burned today'
+      desc: 'Forests cleared for farmland (This includes farming-related industries, like paper mills and sugar refineries)'
     },
     {
-      value: '200,000 acres',
-      desc: 'of land burned today'
+      desc: 'Forests cleared to create pastures for livestock'
+    },
+    {
+      desc: 'Forests burned by wildfires'
     }
   ]
 
@@ -68,10 +122,12 @@ const Gui: React.FC = () => {
 
         <div className={classes.container__gui__wrapper}>
           <Intro />
-          <Facts />
+          <Facts facts={facts}/>
           <Stats stats={stats} />
+          <Causes causes={causes}/>
           <Links />
         </div>
+
       </div>
     </div>
   )
