@@ -5,7 +5,7 @@ import Stats from './sections/stats/Stats'
 import Intro from './sections/intro/Intro'
 import Links from './sections/links/Links'
 import Causes from './sections/causes/Causes'
-import { type statsType } from '@/utils/types'
+import { type statsType, type factType, type causeType } from '@/utils/types'
 import packageJson from '../../../package.json'
 import Button from '../../utils/button/Button'
 
@@ -24,7 +24,7 @@ const Gui: React.FC = () => {
   }
 
   /* list of facts */
-  const facts: factsType[] = [
+  const facts: factType[] = [
     {
       desc: 'Beef Production is the Biggest Driver for Deforestation in the Amazon'
     },
@@ -87,7 +87,7 @@ const Gui: React.FC = () => {
       desc: 'Forests cleared to build factories, businesses, or homes'
     },
     {
-      desc: 'Forests cleared for farmland (This includes farming-related industries, like paper mills and sugar refineries)'
+      desc: 'Forests cleared for farmland'
     },
     {
       desc: 'Forests cleared to create pastures for livestock'
