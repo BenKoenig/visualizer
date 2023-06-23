@@ -28,10 +28,10 @@ const CanvasWrapper: React.FC = () => {
       style={{ width: '100%', height: '100%' }}
       camera={{ position: [20, 6, 0] }} // Adjust the camera position here
     >
-      <pointLight position={[0, 20, 10]} intensity={1.5} />
-      <ambientLight intensity={0.4} />
+      <ambientLight />
+      <pointLight position={[10, 10, 10]} />
       <Sky sunPosition={[0, 1, 0]} inclination={0} azimuth={0.25} />
-      <ModelFbx url="/untitled.fbx" pos={[0,-3,0]} scale={0.15} />
+      <ModelFbx url="/newfile.fbx" pos={[0,-3,0]} scale={0.15} />
       <OrbitControls ref={controlsRef} onChange={handleControlsChange} target={[0, 0, 0]} />
     </Canvas>
   )
