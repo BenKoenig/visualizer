@@ -1,6 +1,6 @@
 /* eslint-disable */
 // @ts-nocheck
-import React from 'react'
+import React, { Suspense } from 'react'
 import { Canvas, extend  } from '@react-three/fiber'
 import { OrbitControls, Plane, MeshReflectorMaterial, Sky } from '@react-three/drei'
 import ModelFbx from './ModelFbx'
@@ -31,7 +31,7 @@ const CanvasWrapper: React.FC = () => {
       <ambientLight />
       <pointLight position={[10, 10, 10]} />
       <Sky sunPosition={[0, 1, 0]} inclination={0} azimuth={0.25} />
-      <ModelFbx url="/newfile.fbx" pos={[0,-3,0]} scale={0.15} />
+{/*       <ModelFbx url="/newfile.fbx" pos={[0,-3,0]} scale={0.15} /> */}
       <OrbitControls ref={controlsRef} onChange={handleControlsChange} target={[0, 0, 0]} />
     </Canvas>
   )
