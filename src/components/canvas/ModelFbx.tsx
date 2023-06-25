@@ -1,8 +1,8 @@
 /* eslint-disable */
+// @ts-nocheck
 import React, { useEffect, useMemo } from 'react';
 import { FBXLoader } from 'three/examples/jsm/loaders/FBXLoader'; // Import FBXLoader
 import { useLoader } from '@react-three/fiber';
-import { useTexture } from '@react-three/drei';
 import * as THREE from 'three';
 
 interface ModelProps {
