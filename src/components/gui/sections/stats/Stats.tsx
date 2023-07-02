@@ -13,7 +13,7 @@ const Stats: React.FC<Props> = ({ stats }: Props) => {
     const interval = setInterval(() => {
       setLiveStats(liveStats.map(stat => ({
         ...stat,
-        value: Math.max(0, stat.value + Math.floor(Math.random() * 10) - 5) // Random variation of ±5
+        value: stat.value + Math.floor(Math.random() * 10) // Random increase up to 10
       })))
     }, 10000) // Update every second
 
