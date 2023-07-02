@@ -36,17 +36,17 @@ const CanvasWrapper: React.FC = () => {
   const controlsRef = React.useRef<any>(null);
   const { sky } = useControls({
     sky: {
-      x: 3.6,
-      y: 3.6,
+      x: 0,
+      y: 0.1,
       z: 3
     }
   })
 
   const { lighting } = useControls({
     lighting: {
-      x: -1,
-      y: 15,
-      z: 20
+      x: 4,
+      y: 9,
+      z: 4
     }
   })
 
