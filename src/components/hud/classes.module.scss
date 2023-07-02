@@ -11,9 +11,9 @@
     gap: 5px;
 
     .container__stage {
-        width: 80px;
-        height: 3.5px;
-        background-color: rgb(188, 188, 188);
+        width: 240px;
+        height: 10px;
+        background-color:  variables.$color-obscure;
         border-radius: 10px;
         overflow: hidden;
 

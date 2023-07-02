@@ -1,16 +1,55 @@
 /* eslint-disable */
 // @ts-nocheck
-import React, { Suspense } from 'react'
-import { Canvas, extend  } from '@react-three/fiber'
+import React, { Suspense, useEffect } from 'react'
+import { Canvas, extend, useThree } from '@react-three/fiber'
 import { OrbitControls, Plane, MeshReflectorMaterial, Sky } from '@react-three/drei'
-import ModelFbx from './ModelFbx'
+import Model from './Model'
+import { useControls } from 'leva'
 
 extend({ Plane, MeshReflectorMaterial });
 
+const CanvasScene = () => {
+  const { camera: threeCamera } = useThree()
+  const { camera, fov } = useControls({
+    camera: {
+      x: 0,
+      y: 0.5,
+      z: -0.4
+    },
+    fov: {
+      value: 59,
+      min: 1,
+      max: 150,
+    }
+  })
+
+  useEffect(() => {
+    threeCamera.position.set(camera.x, camera.y, camera.z)
+    threeCamera.fov = fov
+    threeCamera.updateProjectionMatrix() // necessary to make the FOV change take effect
+  }, [camera, fov, threeCamera])
+
+  return null
+}
+
 const CanvasWrapper: React.FC = () => {
   const controlsRef = React.useRef<any>(null);
+  const { sky } = useControls({
+    sky: {
+      x: 3.6,
+      y: 3.6,
+      z: 3
+    }
+  })
 
-  const lightPosition = [0, 50, 20];
+  const { lighting } = useControls({
+    lighting: {
+      x: -1,
+      y: 15,
+      z: 20
+    }
+  })
+
   const handleControlsChange = () => {
     const controls = controlsRef.current
     if (controls) {
@@ -24,16 +63,18 @@ const CanvasWrapper: React.FC = () => {
   }
 
   return (
-    <Canvas
-      style={{ width: '100%', height: '100%' }}
-      camera={{ position: [20, 6, 0] }} // Adjust the camera position here
-    >
-      <ambientLight />
-      <pointLight position={[10, 10, 10]} />
-      <Sky sunPosition={[0, 1, 0]} inclination={0} azimuth={0.25} />
-      <ModelFbx url="/newfile.fbx" pos={[0,-3,0]} scale={0.15} />
-      <OrbitControls ref={controlsRef} onChange={handleControlsChange} target={[0, 0, 0]} />
-    </Canvas>
+    <>
+      <Canvas
+        style={{ width: '100%', height: '100%' }}
+      >
+        <ambientLight />
+        <pointLight position={[lighting.x, lighting.y, lighting.z]} />
+        <Sky sunPosition={[sky.x, sky.y, sky.z]} inclination={0} azimuth={0.20} />
+        <Model />
+        <OrbitControls ref={controlsRef} onChange={handleControlsChange} target={[0, 0, 0]} />
+        <CanvasScene />
+      </Canvas>
+    </>
   )
 }
 

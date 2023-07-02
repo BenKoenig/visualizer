@@ -6,12 +6,6 @@ const Hud: React.FC = () => {
   const stages: stageType[] = [
     {
       name: 'stage1'
-    },
-    {
-      name: 'stage2'
-    },
-    {
-      name: 'stage3'
     }
   ]
 
