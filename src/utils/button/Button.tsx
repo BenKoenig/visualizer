@@ -19,10 +19,11 @@ const Button: React.FC<Props> = ({ button }) => {
     <>
       <div
         className={`${classes.wrapper} ${(isHovered) ? classes.hovered : ''}`}
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
+
       >
         <button
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
           type="button"
           className={classes.wrapper__button}
           onClick={button.onClick}
