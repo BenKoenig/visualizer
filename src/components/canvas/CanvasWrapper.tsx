@@ -13,11 +13,11 @@ const CanvasScene = () => {
   const { camera, fov } = useControls({
     camera: {
       x: 0,
-      y: 0.5,
+      y: 0.29,
       z: -0.4
     },
     fov: {
-      value: 59,
+      value: 72,
       min: 1,
       max: 150,
     }
