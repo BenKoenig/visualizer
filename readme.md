@@ -6,130 +6,71 @@
 - Vite
 - Three.js + React Three Fiber + drei
 - Framer Motion
+## Setting up a React Three Fiber Project
 
-## How the project was setup
-Create Vite + React template
-```
-npm create vite@latest my-vue-app -- --template react
-```
-**Setting up react app**
-Install the app package
-```
-npm install react-app-dom
-```
+1. Creating a new Vite/React project: Open your terminal and create a new Vite/React project with the following command:
+    ```
+    npm create vite@latest rainforest_deforestation -- --template react
+    ```
+2. Installing necessary packages: Next, install the necessary packages with the following command:
+    ```
+    npm install @react-three/fiber three zod @react-three/drei @types/three react-router-dom
+    ```
+3. Setting up React Router Dom: React Router Dom is a package that facilitates navigation within your React application. Import the necessary components from `react-router-dom` and set up routing according to your application requirements. Here's a basic example:
+    ```jsx
+    import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+    
+    function App() {
+      return (
+        <Router>
+          <Switch>
+            <Route path="/about">
+              <About />
+            </Route>
+            <Route path="/users">
+              <Users />
+            </Route>
+            <Route path="/">
+              <Home />
+            </Route>
+          </Switch>
+        </Router>
+      );
+    }
+    ```
+4. Exporting a 3D model from Blender: Blender is a very popular open-source 3D modeling software. To export a 3D model from Blender, you click on "File > Export" in the menu and then select "GLTF 2.0". GLTF (sometimes also called GLB) stands for GL Transmission Format and is a 3D file format that stores 3D model information in JSON format. It's one of the most popular and powerful formats in WebGL alongside FBX. The advantage of GLTF is that all textures are stored directly in the JSON file, so you don't have to upload them separately to the project file.
+5. Using the exported file: After exporting the file from Blender, you can easily drag and drop this file into your project using an appropriate tool. The tool then generates a code snippet that you insert into your project to render the 3D model. Create a new file in the Components folder named "Model.tsx" and insert the code there.
+6. Creating a CanvasWrapper component: Create another component, for example "CanvasWrapper.tsx", which serves as a canvas and is used as a basis for importing all models. Here is an example of how to create a Sky model with React Three Fiber, Drei, and TypeScript:
+    ```jsx
+    import { Canvas } from '@react-three/fiber';
+    import { Stars } from '@react-three/drei';
+    
+    function CanvasWrapper() {
+      return (
+        <Canvas>
+          <Stars />
+        </Canvas>
+      );
+    }
+    
+    export default CanvasWrapper;
+    ```
+7. Importing the Model component: Finally, import the previously created Model component into the CanvasWrapper component with `import Model from './Model'` and use it in the Canvas, as shown here:
+    ```jsx
+    import { Canvas } from '@react-three/fiber';
+    import { Stars } from '@react-three/drei';
+    import Model from './Model';
+    
+    function CanvasWrapper() {
+      return (
+        <Canvas>
+          <Stars />
+          <Model />
+        </Canvas>
+      );
+    }
+    
+    export default CanvasWrapper;
+    ```
 
-Create a new file called *App.jsx*
-Create the following files:
-- *App.jsx*
-- folder: *pages*
-    - inside *pages* folder: *Home.jsx*
-    - also inside *pages* folder: *About.jsx*
-
-Fill Home.jsx with temporariy code
-```
-// pages/Home.jsx
-const Home = () => {  
-    return(  
-        <>  
-          <h1>Home Page</h1>
-        </>  
-    )  
-}  
-  
-export default Home
-```
-
-Same with the About.jsx file
-```
-// pages/ About.jsx
-const About = () => {  
-    return(  
-        <>  
-          <h1>About Page</h1>
-        </>  
-    )  
-}  
-  
-export default About
-```
-Now to App.jsx
-```
-// App.jsx
-import './App.css'  
-import { Routes, Route } from 'react-app-dom';  
-import Home from "./pages/Home.jsx"; 
-import About from "./pages/About.jsx";  
-  
-function app() {  
-  return (  
-    <>  
-        <Routes>  
-            <Route path="/" element={<Home />} />  
-            <Route path="/" element={<About />} /> 
-        </Routes>  
-    </>  
-  )  
-}  
-  
-export default app
-```
-- import Routes & Route from react-app-dom package
-- import the Home + About pages we have created
-- route the pages Home + About using the following structure
-
-Update index.jsx or app.jsx (name of the file may vary)
-```
-// index.jsx
-import React from 'react'  
-import ReactDOM from 'react-dom/client'  
-import app from './App.jsx'  
-import { BrowserRouter } from 'react-app-dom';  
-  
-ReactDOM.createRoot(document.getElementById('root')).render(  
-  <React.StrictMode>  
-      <BrowserRouter>  
-          <app />  
-      </BrowserRouter>  
-  </React.StrictMode>
-)
-```
-- First you import BrowserRouter from the package you installed in the previous step
-- Then you import app.jsx
-- Insert the app function within BrowserRouter
-
-**Install SCSS**
-```
-npm install --save-dev sass
-```
-
-**Update vite.config.js**
-Vite has built-in support for Sass, so you don't need to add any additional configuration.
-Now you can use Sass in your React components by creating `.scss` or `.sass` files and importing them into your components. For example, create a `styles.scss` file:
-```scss
-// styles.scss
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #f5f5f5;
-}
-```
-
-Then, import the `styles.scss` file in your React component:
-```
-// App.jsx
-import React from 'react'
-import './styles.scss'
-
-const App = () => {
-  return (
-    <div className="container">
-      <h1>Hello, Vite + React + Sass!</h1>
-    </div>
-  )
-}
-
-export default App  
-```
-
-Now you have successfully added Sass to your React Vite project. The Sass styles should be applied to your components, and you can use all Sass features like variables, mixins, and nested styles.
+You have successfully integrated and rendered a 3D model in your React Three Fiber project.

@@ -37,7 +37,7 @@ const CanvasWrapper: React.FC = () => {
   const { sky } = useControls({
     sky: {
       x: 0,
-      y: 0.1,
+      y: 2,
       z: 3
     }
   })
@@ -77,5 +77,7 @@ const CanvasWrapper: React.FC = () => {
     </>
   )
 }
+
+
 
 export default CanvasWrapper
