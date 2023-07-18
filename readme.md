@@ -8,7 +8,7 @@
 - Framer Motion
 
 ## How to find the best 3D models on the web for free
-[<img alt="unity store" width="40px" src="/readme/unity.png" />](https://assetstore.unity.com/)
+[<img alt="unity store" width="40px" src="https://github.com/BenKoenig/visualizer/blob/master/public/readme/unity.png" />](https://assetstore.unity.com/)
 On the Internet, popular platforms like Sketchfab.com or TurboSquid.com offer a wide range of 3D models. However, these models are often not available for free or they might not have the level of detail you might desire.
 An alternative source for 3D models is the Unity Store. It offers a lot of free assets, which can be perfectly used for a WebGL project. The only downside is that these models can only be exported as .dae files. This means that they must first be converted into a WebGL-compatible file.
 To do this, you'll need to import the .dae file into the Blender program and add the corresponding textures to the models. Once you have completed these steps, you can then export the file as a .gltf file. This file format is compatible with WebGL and allows you to use your models in this context.
