@@ -83,8 +83,7 @@ To do this, you'll need to import the .dae file into the Blender program and add
 
 You have successfully integrated and rendered a 3D model in your React Three Fiber project.
 
-## How to deploy your project with Vercel
-# How to Deploy a Project to Vercel
+## How to deploy your project to Vercel
 
 This guide walks through the process of deploying a project to Vercel using GitHub and the Vercel web interface.
 ### Step 1: Create and Push Your Project to GitHub
