@@ -82,3 +82,48 @@ To do this, you'll need to import the .dae file into the Blender program and add
     ```
 
 You have successfully integrated and rendered a 3D model in your React Three Fiber project.
+
+## How to deploy your project with Vercel
+# How to Deploy a Project to Vercel
+
+This guide walks through the process of deploying a project to Vercel using GitHub and the Vercel web interface.
+### Step 1: Create and Push Your Project to GitHub
+
+Before deploying to Vercel, your project needs to be available in a GitHub repository.
+
+1. Navigate to the main page of your GitHub account.
+2. Click the "New" button next to Repositories. You will be redirected to a new page.
+3. Provide a repository name, and optional description.
+4. Choose whether the repository should be public or private.
+5. Initialize the repository with a README, .gitignore, or license if you want (these are optional).
+6. Click the "Create Repository" button to create your new repository.
+
+Next, push your project to this newly created GitHub repository. Navigate to your local project directory in the terminal and run the following commands (replace `<username>` with your GitHub username and `<repository>` with your newly created repository name):
+
+git init
+git add .
+git commit -m "Initial commit"
+git branch -M main
+git remote add origin https://github.com/<username>/<repository>.git
+git push -u origin main]
+
+Now your project is on GitHub and ready to be deployed to Vercel.
+
+### Step 2: Log into Vercel
+
+Visit [Vercel](https://vercel.com/) and click on "Log In" at the top right corner of the page. You can log in using your GitHub, GitLab, or Bitbucket account. For this guide, we will use GitHub.
+
+### Step 3: Import Your Project
+
+Click on the "New Project" button. On the next page, choose the "Import Git Repository" option. Enter the URL of your GitHub repository and click "Continue".
+
+### Step 4: Configure Your Project
+
+You'll be taken to a page to configure your project. Here you can choose the project's name (it will suggest the same name as your repository, but you can change it if you like). In the Root Directory field, leave it empty if your code is in the root of the repository. If your code is in a subdirectory, specify it here.
+
+For the "Build and Output Settings", Vercel should automatically detect these if you're using a popular framework like Next.js, Gatsby, or Create React App. If not, you need to specify them manually. Click "Deploy" to deploy your project.
+
+### Step 5: Automatic Deployment on Push
+
+Vercel can automatically build and deploy your project every time you push to the selected branch (default is "main"). This is set up automatically when you import your project.
+
