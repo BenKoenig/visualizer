@@ -6,7 +6,13 @@
 - Vite
 - Three.js + React Three Fiber + drei
 - Framer Motion
-## Setting up a React Three Fiber Project
+
+## How to find the best 3D models on the web for free
+On the Internet, platforms like Sketchfab.com or TurboSquid.com offer a plethora of 3D models. However, these models are often not available for free or they might not have the level of detail you might desire.
+An alternative source for 3D models is the Unity Store. It offers a wide range of free assets, which can be perfectly used for a WebGL project. The only downside is that these models can only be exported as .dae files. This means that they must first be converted into a WebGL-compatible file.
+To do this, you'll need to import the .dae file into the Blender program and add the corresponding textures to the models. Once you have completed these steps, you can then export the file as a .gltf file. This file format is compatible with WebGL and allows you to use your models in this context.
+
+## Exporting 3D models in GLTF format and setting up a WebGL project.
 
 1. Creating a new Vite/React project: Open your terminal and create a new Vite/React project with the following command:
     ```
