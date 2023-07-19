@@ -91,27 +91,27 @@ Leva is a lightweight and customizable React hook library that exposes a GUI to 
 
 First, you need to install the package using npm:
 ```jsx
- npm i leva
+npm i leva
 ```
 ### Importing Leva
 
 Then, in your React component, you need to import the useControls hook from Leva:
 ```jsx
- import { useControls } from 'leva'
+import { useControls } from 'leva'
 ```
 ### Using Leva
 
 You can then use the useControls hook to create a GUI for controlling your variables. Here's an example:
 ```jsx
- function MyComponent() {
-   const { name, aNumber } = useControls({ name: 'World', aNumber: 0 })
+function MyComponent() {
+const { name, aNumber } = useControls({ name: 'World', aNumber: 0 })
 
-   return (
-     <div>
-       Hey {name}, hello! {aNumber}
-     </div>
+return (
+   <div>
+    Hey {name}, hello! {aNumber}
+   </div>
    )
- }
+}
 ```
 
 ### Using Leva with Three.js
@@ -138,7 +138,61 @@ return null
 ```
 
 This way you achieve a debugging GUI that looks like this:
-[<img alt="leva" width="100%" src="https://github.com/BenKoenig/visualizer/blob/master/public/readme/leva.png" />]()
+[<img alt="leva" width="100%" src="https://github.com/BenKoenig/visualizer/blob/master/public/readme/leva.png" />](https://github.com/pmndrs/leva/blob/main/docs/getting-started.md)
+
+## Using Zod with TypeScript in React
+
+Zod is a TypeScript-first schema declaration and validation library. It allows you to create schemas for your data and then use those schemas to generate TypeScript types. Here's how you can use Zod to create TypeScript types and use them in your React components:
+
+### Creating the types
+
+First, you need to create your Zod schemas and generate TypeScript types from them. You can do this in a separate `types.ts` file:
+
+    import { z } from 'zod'
+
+    /* User */
+    export const userPrototype = z.object({
+      name: z.string(),
+      age: z.number(),
+      email: z.string().email()
+    })
+    export type userType = z.infer<typeof userPrototype>
+
+    /* Product */
+    export const productPrototype = z.object({
+      name: z.string(),
+      price: z.number(),
+      description: z.string()
+    })
+    export type productType = z.infer<typeof productPrototype>
+
+In this file, you're using Zod's `object` function to create schemas for your data, and then using Zod's `infer` function to generate TypeScript types from those schemas.
+
+### Using the types in a React component
+
+You can then import these types into your React components and use them to type your props. Here's how you can do this:
+
+    import React from 'react'
+    import { userType, productType } from './types'
+
+    interface UserProps {
+      user: userType
+    }
+
+    const User: React.FC<UserProps> = ({ user }) => {
+      return <div>{user.name}</div>
+    }
+
+    interface ProductProps {
+      product: productType
+    }
+
+    const Product: React.FC<ProductProps> = ({ product }) => {
+      return <div>{product.name}</div>
+    }
+
+In this example, the `User` and `Product` components each take a prop that is typed with one of the types you generated with Zod. This ensures that the props passed to these components always adhere to the correct shape, and you get autocompletion and type checking in your IDE.
+
 
 ## How to deploy your project to Vercel for free
 [<img alt="unity store" width="100%" src="https://github.com/BenKoenig/visualizer/blob/master/public/readme/vercel.png" />](https://vercel.com)
