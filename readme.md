@@ -7,6 +7,36 @@
 - Three.js + React Three Fiber + drei
 - Framer Motion
 
+## Installation
+
+1. Clone the repository:
+
+    ```
+    git clone https://github.com/BenKoenig/visualizer.git
+    ```
+
+2. Navigate into the cloned repository:
+
+    ```
+    cd visualizer
+    ```
+
+3. Install the dependencies:
+
+    ```
+    npm i
+    ```
+
+## Running the Project
+
+After you've installed the project, you can run it with the following command:
+
+    ```
+    npm run dev
+    ```
+
+This will start the development server. You can then open your browser and navigate to `http://localhost:3000` (or whatever URL/port the console output tells you) to view the project.
+
 ## How to find the best 3D models on the web for free
 [<img alt="unity store" width="100%" src="https://github.com/BenKoenig/visualizer/blob/master/public/readme/unity.png" />](https://assetstore.unity.com/)
 
@@ -176,19 +206,19 @@ import React from 'react'
 import { userType, productType } from './types'
 
 interface UserProps {
-user: userType
+  user: userType
 }
 
 const User: React.FC<UserProps> = ({ user }) => {
-return <div>{user.name}</div>
+  return <div>{user.name}</div>
 }
 
 interface ProductProps {
-product: productType
+  product: productType
 }
 
 const Product: React.FC<ProductProps> = ({ product }) => {
-return <div>{product.name}</div>
+  return <div>{product.name}</div>
 }
 ```
 In this example, the `User` and `Product` components each take a prop that is typed with one of the types you generated with Zod. This ensures that the props passed to these components always adhere to the correct shape, and you get autocompletion and type checking in your IDE.
