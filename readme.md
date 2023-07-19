@@ -42,6 +42,56 @@ On the Internet, popular platforms like Sketchfab.com or TurboSquid.com offer a 
 An alternative source for 3D models is the Unity Store. It offers a lot of free assets, which can be perfectly used for a WebGL project. The only downside is that these models can only be exported as .dae files. This means that they must first be converted into a WebGL-compatible file.
 To do this, you'll need to import the .dae file into the Blender program and add the corresponding textures to the models. Once you have completed these steps, you can then export the file as a .gltf file. This file format is compatible with WebGL and allows you to use your models in this context.
 
+## Creating React Components and Page Structure with TypeScript
+
+React is a library for building user interfaces, and it does this by allowing you to create reusable components. TypeScript is a typed superset of JavaScript that adds static types to your code, making it more robust and maintainable.
+
+### Creating a Component
+
+Here's how you can create a simple functional component in React with TypeScript:
+```tsx
+import React, { FC } from 'react'
+
+const MyComponent: FC = () => {
+return (
+  <div>
+    Hello, world!
+  </div>
+  )
+}
+```
+
+export default MyComponent
+
+In this example, `MyComponent` is a functional component that returns a JSX element. `FC` is a type from React that stands for Function Component. It's a generic type that takes the props of the component as its generic parameter.
+
+### Page Structure
+
+In a typical React application, you would have a hierarchy of components that make up your pages. For example, you might have a `Page` component that contains a `Header` component, a `Content` component, and a `Footer` component:
+
+```tsx
+import React, { FC } from 'react'
+import Header from './Header'
+import Content from './Content'
+import Footer from './Footer'
+
+const Page: FC = () => {
+return (
+   <div>
+    <Header />
+    <Content />
+    <Footer />
+   </div>
+   )
+}
+
+export default Page
+```
+
+In this example, `Page` is a functional component that returns a JSX element containing the `Header`, `Content`, and `Footer` components. Each of these components would be defined in their own files and exported, so they can be imported into other files like this.
+
+
+
 ## Exporting 3D models in GLTF format and setting up a WebGL project
 
 1. Creating a new Vite/React project: Open your terminal and create a new Vite/React project with the following command:
