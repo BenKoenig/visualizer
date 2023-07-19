@@ -147,50 +147,50 @@ Zod is a TypeScript-first schema declaration and validation library. It allows y
 ### Creating the types
 
 First, you need to create your Zod schemas and generate TypeScript types from them. You can do this in a separate `types.ts` file:
+```tsx
+import { z } from 'zod'
 
-    import { z } from 'zod'
+/* User */
+export const userPrototype = z.object({
+   name: z.string(),
+   age: z.number(),
+   email: z.string().email()
+})
+export type userType = z.infer<typeof userPrototype>
 
-    /* User */
-    export const userPrototype = z.object({
-      name: z.string(),
-      age: z.number(),
-      email: z.string().email()
-    })
-    export type userType = z.infer<typeof userPrototype>
-
-    /* Product */
-    export const productPrototype = z.object({
-      name: z.string(),
-      price: z.number(),
-      description: z.string()
-    })
-    export type productType = z.infer<typeof productPrototype>
-
+/* Product */
+export const productPrototype = z.object({
+   name: z.string(),
+   price: z.number(),
+   description: z.string()
+})
+export type productType = z.infer<typeof productPrototype>
+```
 In this file, you're using Zod's `object` function to create schemas for your data, and then using Zod's `infer` function to generate TypeScript types from those schemas.
 
 ### Using the types in a React component
 
 You can then import these types into your React components and use them to type your props. Here's how you can do this:
+```tsx
+import React from 'react'
+import { userType, productType } from './types'
 
-    import React from 'react'
-    import { userType, productType } from './types'
+interface UserProps {
+user: userType
+}
 
-    interface UserProps {
-      user: userType
-    }
+const User: React.FC<UserProps> = ({ user }) => {
+return <div>{user.name}</div>
+}
 
-    const User: React.FC<UserProps> = ({ user }) => {
-      return <div>{user.name}</div>
-    }
+interface ProductProps {
+product: productType
+}
 
-    interface ProductProps {
-      product: productType
-    }
-
-    const Product: React.FC<ProductProps> = ({ product }) => {
-      return <div>{product.name}</div>
-    }
-
+const Product: React.FC<ProductProps> = ({ product }) => {
+return <div>{product.name}</div>
+}
+```
 In this example, the `User` and `Product` components each take a prop that is typed with one of the types you generated with Zod. This ensures that the props passed to these components always adhere to the correct shape, and you get autocompletion and type checking in your IDE.
 
 
