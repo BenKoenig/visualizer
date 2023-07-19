@@ -134,6 +134,10 @@ If you're using Leva with Three.js, you can use it to control any variable in yo
 
       return null
     }
+
+    This way you achieve a debugging GUI that looks like this:
+[<img alt="leva" width="100%" src="https://github.com/BenKoenig/visualizer/blob/master/public/readme/leva.png" />]
+    
 ```
 
 ## How to deploy your project to Vercel for free
