@@ -31,9 +31,7 @@
 
 After you've installed the project, you can run it with the following command:
 
-    ```
     npm run dev
-    ```
 
 This will start the development server. You can then open your browser and navigate to `http://localhost:3000` (or whatever URL/port the console output tells you) to view the project.
 
