@@ -14,7 +14,7 @@ On the Internet, popular platforms like Sketchfab.com or TurboSquid.com offer a 
 An alternative source for 3D models is the Unity Store. It offers a lot of free assets, which can be perfectly used for a WebGL project. The only downside is that these models can only be exported as .dae files. This means that they must first be converted into a WebGL-compatible file.
 To do this, you'll need to import the .dae file into the Blender program and add the corresponding textures to the models. Once you have completed these steps, you can then export the file as a .gltf file. This file format is compatible with WebGL and allows you to use your models in this context.
 
-## Exporting 3D models in GLTF format and setting up a WebGL project.
+## Exporting 3D models in GLTF format and setting up a WebGL project
 
 1. Creating a new Vite/React project: Open your terminal and create a new Vite/React project with the following command:
     ```
@@ -83,8 +83,61 @@ To do this, you'll need to import the .dae file into the Blender program and add
 
 You have successfully integrated and rendered a 3D model in your React Three Fiber project.
 
-## How to deploy your project to Vercel
-[<img alt="unity store" width="100%" src="https://github.com/BenKoenig/visualizer/blob/master/public/readme/vercel.png" />](https://assetstore.unity.com/)
+## Using Leva for Debugging in React and Three.js
+
+Leva is a lightweight and customizable React hook library that exposes a GUI to control your variables in real-time. It can be used as a debugging tool for Three.js or any other JavaScript/React application.
+
+### Installation
+
+First, you need to install the package using npm:
+   ```jsx
+    npm i leva
+   ```
+### Importing Leva
+
+Then, in your React component, you need to import the useControls hook from Leva:
+   ```jsx
+    import { useControls } from 'leva'
+   ```
+### Using Leva
+
+You can then use the useControls hook to create a GUI for controlling your variables. Here's an example:
+   ```jsx
+       function MyComponent() {
+         const { name, aNumber } = useControls({ name: 'World', aNumber: 0 })
+   
+         return (
+           <div>
+             Hey {name}, hello! {aNumber}
+           </div>
+         )
+       }
+ ```
+
+### Using Leva with Three.js
+
+If you're using Leva with Three.js, you can use it to control any variable in your Three.js scene. For example, you could control the position of a mesh, the color of a material, the intensity of a light, etc. Here's an example:
+```jsx
+    import { useControls } from 'leva'
+    import { useFrame } from '@react-three/fiber'
+
+    function MyComponent() {
+      const { color, intensity } = useControls({ color: '#ffffff', intensity: 1 })
+
+      useFrame(({ scene }) => {
+        const light = scene.getObjectByName('MyLight')
+        if (light) {
+          light.color.set(color)
+          light.intensity = intensity
+        }
+      })
+
+      return null
+    }
+```
+
+## How to deploy your project to Vercel for free
+[<img alt="unity store" width="100%" src="https://github.com/BenKoenig/visualizer/blob/master/public/readme/vercel.png" />](https://vercel.com)
 
 
 This guide walks through the process of deploying a project to Vercel using GitHub and the Vercel web interface.
