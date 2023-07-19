@@ -59,9 +59,11 @@ return (
   </div>
   )
 }
-```
 
 export default MyComponent
+```
+
+
 
 In this example, `MyComponent` is a functional component that returns a JSX element. `FC` is a type from React that stands for Function Component. It's a generic type that takes the props of the component as its generic parameter.
 
@@ -78,9 +80,9 @@ import Footer from './Footer'
 const Page: FC = () => {
 return (
    <div>
-    <Header />
-    <Content />
-    <Footer />
+      <Header />
+      <Content />
+      <Footer />
    </div>
    )
 }
