@@ -1,11 +1,11 @@
 ## Tech Stack
-- React
-- Typescript
-- ZOD
-- SASS
-- Vite
-- Three.js + React Three Fiber + drei
-- Framer Motion
+- React 🦋
+- Typescript 🤓
+- ZOD 🐭
+- SASS 💅
+- Vite 🚀
+- Three.js + React Three Fiber + drei 🖼️
+- Framer Motion 💨
 
 ## Installation
 
