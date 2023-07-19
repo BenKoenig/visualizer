@@ -90,55 +90,55 @@ Leva is a lightweight and customizable React hook library that exposes a GUI to 
 ### Installation
 
 First, you need to install the package using npm:
-   ```jsx
-    npm i leva
-   ```
+```jsx
+ npm i leva
+```
 ### Importing Leva
 
 Then, in your React component, you need to import the useControls hook from Leva:
-   ```jsx
-    import { useControls } from 'leva'
-   ```
+```jsx
+ import { useControls } from 'leva'
+```
 ### Using Leva
 
 You can then use the useControls hook to create a GUI for controlling your variables. Here's an example:
-   ```jsx
-       function MyComponent() {
-         const { name, aNumber } = useControls({ name: 'World', aNumber: 0 })
-   
-         return (
-           <div>
-             Hey {name}, hello! {aNumber}
-           </div>
-         )
-       }
- ```
+```jsx
+ function MyComponent() {
+   const { name, aNumber } = useControls({ name: 'World', aNumber: 0 })
+
+   return (
+     <div>
+       Hey {name}, hello! {aNumber}
+     </div>
+   )
+ }
+```
 
 ### Using Leva with Three.js
 
 If you're using Leva with Three.js, you can use it to control any variable in your Three.js scene. For example, you could control the position of a mesh, the color of a material, the intensity of a light, etc. Here's an example:
 ```jsx
-    import { useControls } from 'leva'
-    import { useFrame } from '@react-three/fiber'
+import { useControls } from 'leva'
+import { useFrame } from '@react-three/fiber'
 
-    function MyComponent() {
-      const { color, intensity } = useControls({ color: '#ffffff', intensity: 1 })
+function MyComponent() {
+const { color, intensity } = useControls({ color: '#ffffff', intensity: 1 })
 
-      useFrame(({ scene }) => {
-        const light = scene.getObjectByName('MyLight')
-        if (light) {
-          light.color.set(color)
-          light.intensity = intensity
-        }
-      })
+useFrame(({ scene }) => {
+  const light = scene.getObjectByName('MyLight')
+  if (light) {
+    light.color.set(color)
+    light.intensity = intensity
+  }
+})
 
-      return null
-    }
+return null
+}
 
 ```
 
 This way you achieve a debugging GUI that looks like this:
-[<img alt="leva" style="max-width:"500px" width="100%" src="https://github.com/BenKoenig/visualizer/blob/master/public/readme/leva.png" />]()
+[<img alt="leva" width="100%" src="https://github.com/BenKoenig/visualizer/blob/master/public/readme/leva.png" />]()
 
 ## How to deploy your project to Vercel for free
 [<img alt="unity store" width="100%" src="https://github.com/BenKoenig/visualizer/blob/master/public/readme/vercel.png" />](https://vercel.com)
