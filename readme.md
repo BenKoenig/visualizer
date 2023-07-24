@@ -5,7 +5,7 @@ An open-source JavaScript library developed by Facebook for building user interf
 ### Typescript 🤓 ###
 An open-source programming language developed and maintained by Microsoft. It's a statically typed superset of JavaScript that compiles to plain JavaScript, adding optional static typing and class-based object-oriented programming to the language, which can help catch errors early during development and improve code maintainability and readability.
 
-### ZOD 🐭###
+### ZOD 🐭 ###
 ZOD is a TypeScript-first schema declaration and validation library, which enables developers to build and validate complex data structures in a type-safe manner.
 
 ### Sass 💅 ###
