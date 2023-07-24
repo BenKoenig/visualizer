@@ -1,11 +1,18 @@
 ## Tech Stack
 - React 🦋
+An open-source JavaScript library developed by Facebook for building user interfaces, particularly for single-page applications. It allows developers to create reusable UI components, and manage and track the state of these components, providing a responsive and efficient way to build web applications.
 - Typescript 🤓
+An open-source programming language developed and maintained by Microsoft. It's a statically typed superset of JavaScript that compiles to plain JavaScript, adding optional static typing and class-based object-oriented programming to the language, which can help catch errors early during development and improve code maintainability and readability.
 - ZOD 🐭
-- SASS 💅
+ZOD is a TypeScript-first schema declaration and validation library, which enables developers to build and validate complex data structures in a type-safe manner.
+- Sass 💅 
+Sass (Syntactically Awesome Stylesheets) is a preprocessor scripting language that is interpreted or compiled into Cascading Style Sheets (CSS), enabling developers to use variables, nested rules, mixins, functions, and more, all with a CSS-compatible syntax.
 - Vite 🚀
+Vite is a modern front-end build tool, created by Evan You (the creator of Vue.js), that offers a faster and leaner development experience for modern web projects, leveraging browser's native ES modules (ESM) for hot-module replacement during development, and featuring efficient, out-of-the-box optimized production builds.
 - Three.js + React Three Fiber + drei 🖼️
-- Framer Motion 💨
+Three.js is a cross-browser JavaScript library that enables the creation and display of 3D computer graphics in a web browser, using WebGL. React Three Fiber is a React renderer for Three.js that brings the reactivity of React to the world of 3D graphics, allowing developers to work with Three.js in a more React-like way. Drei is a useful collection of reusable components and utilities for React Three Fiber, aimed at simplifying and speeding up development with Three.js and React Three Fiber.
+- Framer Motion 💨 
+Framer Motion is a production-ready motion library for React that enables developers to create animations and interactions with a simple and intuitive API. It provides features like gesture recognition, pose animation, drag controls, and more, making it easier to implement complex user interface transitions and animations.
 
 ## Installation
 

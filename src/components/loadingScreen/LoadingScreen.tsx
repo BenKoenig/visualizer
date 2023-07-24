@@ -1,7 +1,7 @@
 import React from 'react'
 import classes from './classes.module.scss'
 
-const Loading: React.FC = () => {
+const LoadingScreen: React.FC = () => {
   return (
     <>
       <div className={classes.container}>
@@ -17,4 +17,4 @@ const Loading: React.FC = () => {
     </>
   )
 }
-export default Loading
+export default LoadingScreen
