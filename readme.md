@@ -105,7 +105,22 @@ export default Page
 
 In this example, `Page` is a functional component that returns a JSX element containing the `Header`, `Content`, and `Footer` components. Each of these components would be defined in their own files and exported, so they can be imported into other files like this.
 
+## Creating a 3D terrain of an existing map of a city
 
+[<img alt="unity store" width="100%" src="https://github.com/BenKoenig/visualizer/blob/master/public/readme/blender-1.jpeg" />](https://blender.com)
+[<img alt="unity store" width="100%" src="https://github.com/BenKoenig/visualizer/blob/master/public/readme/blender-2.jpeg" />](https://blender.com)
+1. Look up an SVG map of Vienna online. 
+2. Once found, import the SVG file into Blender. 
+3. Within Blender, take the SVG and first convert it to a grease pencil stroke, and then subsequently to a curve. 
+4. Given that the converted SVG path often contains an excessive number of vertices, you'll need to scale it down and use the "merge by distance" function to simplify the path. 
+5. After you've refined the curve, proceed to convert that curve into a mesh. 
+6. Once in mesh form, extrude the edges along the Z-axis. 
+7. With the mesh extruded, go ahead and fill in the faces to complete the 3D shape. 
+8. For optimization, it's crucial to triangulate the mesh. Remember, having ngons in a mesh can lead to various issues, so it's best to avoid them. 
+9. Separately, box model a representation of the Danube River to accompany the Vienna map. 
+10. Add the appropriate materials to the meshes to give them realistic or stylized textures and colors. 
+11. Once both meshes — the Vienna map and the Danube River — are ready, join them together to create a unified model. 
+12. Lastly, export your completed model for use in other applications or for sharing.
 
 ## Exporting 3D models in GLTF format and setting up a WebGL project
 
