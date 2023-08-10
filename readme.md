@@ -1,3 +1,21 @@
+# Rainforest Deforestation Visualizer 
+## SAE Institute Project
+The "Rainforest Deforestation Visualizer" is a web-based application that uses WebGL (Web Graphics Library) to depict a virtual rainforest. The visualisation shows how long it would take for the rainforest, which corresponds to the area of Vienna, to be completely deforested.
+Furthermore, the application provides statistics on the deforestation of the rainforest, which give the user an insight into the extent of the destruction. Information such as the annual rate of deforestation, the area affected and the associated loss of biodiversity and natural resources can be displayed.
+Through the interactive presentation, awareness of the need for conservation and sustainable management of these important ecosystems is raised.
+
+# E-Learning / readme content
+Info: 15 minute read
+1. Tech Stack
+2. Running the project (how to install this repository to your local device)
+3. How to find the best 3D models on the web for free
+4. Creating React Components and Page Structure with TypeScript
+5. Creating a 3D terrain of an existing map of a city
+6. Using Leva for Debugging in React and Three.js
+7. Using Leva with Three.js
+8. Using Zod with TypeScript in React
+9. How to deploy your project to Vercel for free
+
 # Tech Stack
 ### React 🦋 ###
 An open-source JavaScript library developed by Facebook for building user interfaces, particularly for single-page applications. It allows developers to create reusable UI components, and manage and track the state of these components, providing a responsive and efficient way to build web applications.
