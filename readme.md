@@ -1,4 +1,4 @@
-## Tech Stack
+# Tech Stack
 ### React 🦋 ###
 An open-source JavaScript library developed by Facebook for building user interfaces, particularly for single-page applications. It allows developers to create reusable UI components, and manage and track the state of these components, providing a responsive and efficient way to build web applications.
 
@@ -54,6 +54,8 @@ This will start the development server. You can then open your browser and navig
 On the Internet, popular platforms like Sketchfab.com or TurboSquid.com offer a wide range of 3D models. However, these models are often not available for free or they might not have the level of detail you might desire.
 An alternative source for 3D models is the Unity Store. It offers a lot of free assets, which can be perfectly used for a WebGL project. The only downside is that these models can only be exported as .dae files. This means that they must first be converted into a WebGL-compatible file.
 To do this, you'll need to import the .dae file into the Blender program and add the corresponding textures to the models. Once you have completed these steps, you can then export the file as a .gltf file. This file format is compatible with WebGL and allows you to use your models in this context.
+
+# E-Learning: How to create a WebGL Application with React and Three.js
 
 ## Creating React Components and Page Structure with TypeScript
 
@@ -347,3 +349,9 @@ For the "Build and Output Settings", Vercel should automatically detect these if
 
 Vercel can automatically build and deploy your project every time you push to the selected branch (default is "main"). This is set up automatically when you import your project.
 
+# Future Plans
+- [ ] Add more visualizations
+- [ ] Add more statistics
+- [ ] Add deforestation visualisation 
+- [ ] Add donation links 
+- [ ] Improve shaders
