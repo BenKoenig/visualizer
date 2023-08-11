@@ -5,6 +5,7 @@ Furthermore, the application provides statistics on the deforestation of the rai
 Through the interactive presentation, awareness of the need for conservation and sustainable management of these important ecosystems is raised.
 
 # E-Learning / readme content
+
 Info: 15 minute read
 1. Tech Stack
 2. Running the project (how to install this repository to your local device)

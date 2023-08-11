@@ -77,7 +77,4 @@ const CanvasWrapper: React.FC = () => {
     </>
   )
 }
-
-
-
 export default CanvasWrapper
