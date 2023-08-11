@@ -14,7 +14,7 @@ const Gui: React.FC = () => {
   const [hideGUI, setHideGUI] = useState(true)
   const projectName = packageJson.name
   const projectVersion = packageJson.version
-  const extendBtnText = 'More Details'
+  const extendBtnText = 'View Statistics'
   const closeBtnText = 'Close'
 
   // function to toggle the value of "hideGUI" between true and false
