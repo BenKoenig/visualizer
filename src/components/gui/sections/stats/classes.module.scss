@@ -33,6 +33,11 @@
         word-spacing: 100vw;
         width: calc(100% - 25px);
         height: 45px;
+        gap: 10px;
+        border: 1px solid #000;
+        &--svg {
+          width: 25px;
+        }
       }
     }
   }

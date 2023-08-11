@@ -27,7 +27,7 @@ const Stats: React.FC<Props> = ({ stats }: Props) => {
                 {liveStats.map((statsItem, i) => (
                     <li key={i} className={classes.stats__list__item}>
                         <span className={classes.stats__list__item__value}>
-                            {statsItem.value.toLocaleString('en-US')} {statsItem.unit}
+                          {statsItem.value.toLocaleString('en-US')} {statsItem.unit}
                         </span>
                         {statsItem.desc}
                     </li>

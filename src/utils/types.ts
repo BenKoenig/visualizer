@@ -4,7 +4,8 @@ import { z } from 'zod'
 export const statsPrototype = z.object({
   value: z.number(),
   unit: z.string(),
-  desc: z.string()
+  desc: z.string(),
+  svg: z.string()
 })
 export type statsType = z.infer<typeof statsPrototype>
 
