@@ -31,6 +31,7 @@ const LoadingBar: React.FC = () => {
 
   return (
     <div className={classes.container}>
+      <p>Just <strong>{CalculateTimeRemaining()} days</strong> until deforestation</p>
       {stages.map((stage, i) => (
         <div key={i} className={classes.container__stage}>
           <div className={classes.fill} style={{ width: `${i < currentStage ? '100%' : i === currentStage ? `${progress}%` : '0%'}` }} />

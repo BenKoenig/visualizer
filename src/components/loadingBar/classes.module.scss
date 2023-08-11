@@ -7,8 +7,16 @@
     transform: translateX(-50%);
     color: #fff;
     z-index: 1;
+    gap: 2px;
     display: flex;
-    gap: 5px;
+    flex-direction: column;
+    background: #fff;
+    padding: 15px;
+    border-radius: variables.$rounded-base;
+
+    p {
+        color: #000;
+    }
 
     .container__stage {
         width: 240px;
@@ -16,6 +24,7 @@
         background-color:  variables.$color-obscure;
         border-radius: 10px;
         overflow: hidden;
+        border: #000 1px solid;
 
         .fill {
             height: 100%;
