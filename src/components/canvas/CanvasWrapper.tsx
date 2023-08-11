@@ -1,14 +1,17 @@
 /* eslint-disable */
 // @ts-nocheck
-import React, { Suspense, useEffect } from 'react'
+import React, { Suspense, useEffect, useState } from 'react'
 import { Canvas, extend, useThree } from '@react-three/fiber'
 import { OrbitControls, Plane, MeshReflectorMaterial, Sky } from '@react-three/drei'
 import Model from './Model'
 import { useControls } from 'leva'
+import LoadingScreen from '../loadingScreen/LoadingScreen'
 
 extend({ Plane, MeshReflectorMaterial });
 
 const CanvasScene = () => {
+
+
   const { camera: threeCamera } = useThree()
   const { camera, fov } = useControls({
     camera: {
@@ -34,6 +37,11 @@ const CanvasScene = () => {
 
 const CanvasWrapper: React.FC = () => {
   const controlsRef = React.useRef<any>(null);
+  const [isLoading, setIsLoading] = useState(true);
+  // Callback to handle when the model has finished loading
+  const handleModelLoaded = () => {
+    setIsLoading(false);
+  };
   const { sky } = useControls({
     sky: {
       x: -2.5,
@@ -64,16 +72,17 @@ const CanvasWrapper: React.FC = () => {
 
   return (
     <>
-      <Canvas
-        style={{ width: '100%', height: '100%' }}
-      >
-        <ambientLight />
-        <pointLight position={[lighting.x, lighting.y, lighting.z]} />
-        <Sky sunPosition={[sky.x, sky.y, sky.z]} inclination={0} azimuth={0.20} />
-        <Model />
-        <OrbitControls ref={controlsRef} onChange={handleControlsChange} target={[0, 0, 0]} />
-        <CanvasScene />
-      </Canvas>
+      {isLoading && <LoadingScreen/>}
+        <Canvas
+          style={{ width: '100%', height: '100%' }}
+        >
+          <ambientLight />
+          <pointLight position={[lighting.x, lighting.y, lighting.z]} />
+          <Sky sunPosition={[sky.x, sky.y, sky.z]} inclination={0} azimuth={0.20} />
+          <Model setIsLoading={setIsLoading} />
+          <OrbitControls ref={controlsRef} onChange={handleControlsChange} target={[0, 0, 0]} />
+          <CanvasScene />
+        </Canvas>
     </>
   )
 }

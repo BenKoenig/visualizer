@@ -6,7 +6,7 @@ const Links: React.FC = () => {
         <div>
             <p>This project is developed by Benjamin König</p>
             <a href="https://github.com/BenKoenig/visualizer" className={classes.links__a}>
-                Contribute on GitHub (currently private)
+                Contribute on GitHub
             </a>
             <div className={classes.links}>
                 <div className={classes.links__item}>

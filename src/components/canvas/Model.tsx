@@ -1,12 +1,50 @@
 /* eslint-disable */
 // @ts-nocheck
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import { useGLTF } from "@react-three/drei";
 
 const Model = (props) => {
   const { nodes, materials } = useGLTF("/vienna.glb");
+
+  props.setIsLoading(false)
+/*   const parentGroupRef = useRef();
+  const allMeshesAndGroups = useRef([]); // Using a ref to hold the array
+
+
+
+  useEffect(() => {
+    // Traverse the children to populate the allMeshesAndGroups ref
+    if (parentGroupRef.current) {
+      parentGroupRef.current.traverse((child) => {
+        if (child.isMesh || child.isGroup) {
+          allMeshesAndGroups.current.push(child);
+        }
+      });
+
+      // Now handle the timed visibility changes
+      const totalItems = allMeshesAndGroups.current.length;
+      const intervalTime = props.timerDuration / totalItems;
+      let counter = 0;
+
+      const timer = setInterval(() => {
+        if (counter < totalItems) {
+          allMeshesAndGroups.current[counter].visible = false;
+          counter++;
+        } else {
+          clearInterval(timer);
+          allMeshesAndGroups.current.forEach(mesh => mesh.visible = true); // Restore visibility
+        }
+      }, intervalTime);
+
+      // Cleanup function
+      return () => clearInterval(timer);
+    }
+  }, []); */
+
+
+
   return (
-    <group {...props} dispose={null}>
+    <group  {...props} dispose={null}>
       <group
         position={[-0.002, 0.001, 0.001]}
         rotation={[0, -0.128, -Math.PI]}
