@@ -12,7 +12,10 @@ const LoadingScreen: React.FC = () => {
             <div></div>
           </div>
         </div>
-
+        <div className={classes.container__infoWrapper}>
+          <p>If Vienna were a rainforest, it would only take 30 days for it to be completely deforested.</p>
+          <p><i>Loading content...</i></p>
+        </div>
       </div>
     </>
   )

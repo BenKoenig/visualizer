@@ -11,6 +11,23 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+
+  &__infoWrapper {
+    margin-top: 10px;
+    p {
+      text-align: center;
+      padding: 0 5px;
+      color: #fff;
+      max-width: 320px;
+    }
+    i {
+      font-style: italic;
+      color: #d2d2d2;
+    }
+  }
+
+
 }
 
 .lds-ripple {

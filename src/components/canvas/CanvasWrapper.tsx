@@ -40,7 +40,16 @@ const CanvasWrapper: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
   // Callback to handle when the model has finished loading
   const handleModelLoaded = () => {
-    setIsLoading(false);
+    const minimumLoadTime = 5000; // 5 seconds in milliseconds
+
+    const loadingStartTime = Date.now();
+    const elapsedTime = Date.now() - loadingStartTime;
+
+    const remainingTime = elapsedTime > minimumLoadTime ? 0 : minimumLoadTime - elapsedTime;
+
+    setTimeout(() => {
+      setIsLoading(false);
+    }, remainingTime);
   };
   const { sky } = useControls({
     sky: {
@@ -79,7 +88,7 @@ const CanvasWrapper: React.FC = () => {
           <ambientLight />
           <pointLight position={[lighting.x, lighting.y, lighting.z]} />
           <Sky sunPosition={[sky.x, sky.y, sky.z]} inclination={0} azimuth={0.20} />
-          <Model setIsLoading={setIsLoading} />
+          <Model handleModelLoaded={handleModelLoaded} />
           <OrbitControls ref={controlsRef} onChange={handleControlsChange} target={[0, 0, 0]} />
           <CanvasScene />
         </Canvas>

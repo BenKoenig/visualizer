@@ -6,7 +6,7 @@ import { useGLTF } from "@react-three/drei";
 const Model = (props) => {
   const { nodes, materials } = useGLTF("/vienna.glb");
 
-  props.setIsLoading(false)
+  props.handleModelLoaded()
 /*   const parentGroupRef = useRef();
   const allMeshesAndGroups = useRef([]); // Using a ref to hold the array
 
