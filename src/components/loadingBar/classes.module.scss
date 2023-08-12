@@ -32,6 +32,7 @@
             background-color: variables.$color-danger;
             width: 0;
             transition: width 0.1s linear;
+            border-right: 1px solid #000;
         }
     }
 }
