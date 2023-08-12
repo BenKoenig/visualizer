@@ -27,6 +27,7 @@ const Stats: React.FC<Props> = ({ stats }: Props) => {
                 {liveStats.map((statsItem, i) => (
                     <li key={i} className={classes.stats__list__item}>
                         <span className={classes.stats__list__item__value}>
+                          <span className={classes['stats__list__item__value--svg']} dangerouslySetInnerHTML={{ __html: statsItem.svg }} />
                           <span>
                             {statsItem.value.toLocaleString('en-US')} {statsItem.unit}
                           </span>
