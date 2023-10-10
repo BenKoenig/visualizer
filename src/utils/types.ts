@@ -1,6 +1,6 @@
 import { z } from 'zod'
 
-/* Causes */
+/* Stats */
 export const statsPrototype = z.object({
   value: z.number(),
   unit: z.string(),
@@ -9,16 +9,24 @@ export const statsPrototype = z.object({
 })
 export type statsType = z.infer<typeof statsPrototype>
 
+/* Causes */
 export const causePrototype = z.object({
   desc: z.string()
 })
 export type causeType = z.infer<typeof causePrototype>
 
+/* Donation */
+export const donationPrototype = z.object({
+  link: z.string(),
+  org: z.string()
+})
+export type donationType = z.infer<typeof donationPrototype>
+
+/* Facts */
 export const factPrototype = z.object({
   desc: z.string()
 })
 export type factType = z.infer<typeof factPrototype>
-
 
 /* Stages */
 export const stagePrototype = z.object({

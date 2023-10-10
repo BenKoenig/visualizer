@@ -4,11 +4,11 @@ import Gui from '../components/gui/Gui'
 import LoadingBar from '../components/loadingBar/LoadingBar'
 const Home: React.FC = () => {
   return (
-        <>
-            <LoadingBar/>
-            <Gui/>
-            <CanvasWrapper/>
-        </>
+    <>
+      <LoadingBar />
+      <Gui />
+      <CanvasWrapper />
+    </>
   )
 }
 

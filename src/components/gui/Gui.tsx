@@ -5,9 +5,10 @@ import Stats from './sections/stats/Stats'
 import Intro from './sections/intro/Intro'
 import Links from './sections/links/Links'
 import Causes from './sections/causes/Causes'
-import { type statsType, type factType, type causeType } from '@/utils/types'
+import { type statsType, type factType, type causeType, type donationType } from '@/utils/types'
 import packageJson from '../../../package.json'
 import Button from '../../utils/button/Button'
+import DonationLinks from './sections/donationLinks/DonationLinks'
 
 const Gui: React.FC = () => {
   // state variable with initial value of "true" and a function "setHideGUI" to toggle its value
@@ -101,6 +102,26 @@ const Gui: React.FC = () => {
     }
   ]
 
+  // donation links
+  const donationLinks: donationType[] = [
+    {
+      link: 'https://www.rainforesttrust.org/',
+      org: 'Rainforest Trust'
+    },
+    {
+      link: 'https://www.amazonconservation.org/take-action/donate/',
+      org: 'Amazon Conservation'
+    },
+    {
+      link: 'https://www.rainforest-alliance.org/support/',
+      org: 'Rainforest Alliance'
+    },
+    {
+      link: 'https://rainforestfoundation.org/engage/give/',
+      org: 'Rainforest foundation'
+    }
+  ]
+
   return (
     // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
     <div className={`${classes.container} ${hideGUI && classes['container--closed']}`}>
@@ -129,6 +150,7 @@ const Gui: React.FC = () => {
           <Facts facts={facts}/>
           <Stats stats={stats} />
           <Causes causes={causes}/>
+          <DonationLinks donationLinks={donationLinks}/>
           <Links />
         </div>
 
